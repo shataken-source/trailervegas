@@ -9,16 +9,20 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 6B check
-**Run at:** 2026-09-27 18:29 UTC
-**Status:** ⏸️ Not run
+**Batch:** State snapshot
+**Run at:** 2026-09-27 19:14 UTC
+**Status:** ✅ Complete
 
-Founder said "check trailervegas for your commands." Batch 6B did not
-fire. Two gates are still closed.
+`STATE_SNAPSHOT.md` is on `main` at `b58ffed`. It lists 52 tracked files, all last touched 2026-09-27, the seven active tasks (T-004 through T-010; T-005 blocked; T-010 still marked open in `TASKS.md` even though the founder answers were committed in `a57e365`), eight messages still in the Open section (M-003, M-004, M-008, M-010, M-011, M-013, M-014, M-015), and one open batch, 6B, which stays blocked because Claude has not supplied the covenant file blocks.
 
 ---
 
 ## Report Log
+
+### State snapshot — 2026-09-27 19:14 UTC
+Status: ✅ Complete
+
+Commit: `b58ffed` — `Add STATE_SNAPSHOT.md`
 
 ### Batch 6B check — 2026-09-27 18:29 UTC
 Status: ⏸️ Not run
