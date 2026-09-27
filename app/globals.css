@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #faf7f2;
+  color: #1a1a1a;
+}
+
+.doc h1 {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 2.25rem;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  margin: 0 0 1rem;
+}
+
+.doc h2 {
+  font-family: var(--font-display), Impact, sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  margin: 2rem 0 0.75rem;
+}
+
+.doc h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0.5rem;
+}
+
+.doc p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+}
+
+.doc ul {
+  margin: 0 0 1rem 1.25rem;
+  list-style: disc;
+}
+
+.doc li {
+  margin: 0.25rem 0;
+}
+
+.doc a {
+  color: #0f1b2d;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.doc blockquote {
+  border-left: 4px solid #f5b700;
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  font-size: 1.15rem;
+}
+
+.doc hr {
+  border: 0;
+  border-top: 1px solid #e5e0d8;
+  margin: 2rem 0;
+}
+
+.doc table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.doc th,
+.doc td {
+  border: 1px solid #e5e0d8;
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+  vertical-align: top;
+}

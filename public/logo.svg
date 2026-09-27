@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 140" role="img" aria-label="TrailerVegas">
+  <rect width="720" height="140" fill="#FAF7F2"/>
+  <text x="16" y="96" fill="#0F1B2D" font-family="Arial Black, Impact, sans-serif" font-size="72" font-weight="700">TrailerVegas</text>
+  <rect x="16" y="108" width="250" height="8" fill="#FF3D7F"/>
+  <rect x="274" y="108" width="80" height="8" fill="#00D9C0"/>
+  <rect x="362" y="108" width="40" height="8" fill="#F5B700"/>
+</svg>

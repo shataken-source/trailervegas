@@ -84,6 +84,32 @@ RVer with feedback, open an issue or email.
 
 ---
 
+## Deploy
+
+The Phase 0 site is the Next.js app in this folder.
+
+```bash
+npm install
+npm run dev
+```
+
+Production host is Vercel. Set the project root to this repo. Add these
+environment variables in Vercel. Do not commit them.
+
+- `SUPABASE_USERS_URL`
+- `SUPABASE_USERS_ANON_KEY`
+- `SUPABASE_USERS_SERVICE_ROLE_KEY`
+
+Create the `trailervegas-users` project first and run the Project 1
+block of `automation/supabase_schema.sql` in that project only. Forms
+return a server error until those variables exist. Pages still build.
+
+`SUPABASE_ROUNDTABLE_*` is not used by this site.
+
+```bash
+npm run build
+```
+
 ## License
 
 Content and code are the property of the founder. The Trust Covenant
