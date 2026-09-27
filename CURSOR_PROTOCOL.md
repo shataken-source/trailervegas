@@ -26,6 +26,8 @@ commands" (or any variant):
 - The parent `cevict-live` folder is not part of this repo.
 - If a command is unclear, write a question in `CURSOR_OUTBOX.md` and
   skip that command. Do not guess.
+- When an AI's output arrives via the founder, save it
+  immediately. Do not route through another AI first.
 
 **Commit message format:** `[Batch N] <what was done>`
 
