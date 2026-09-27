@@ -5,6 +5,64 @@ Newest at top.
 
 ---
 
+## 2026-09-27 — Supabase Isolation: Two Projects, Not Two Schemas
+
+**Decision:** User PII and the AI roundtable message bus live in
+**separate Supabase projects**, not two schemas in one project.
+
+- Project 1: `trailervegas-users` — waitlist, help_requests,
+  provider_applications, consent records.
+- Project 2: `trailervegas-roundtable` — messages, tasks, rounds,
+  responses, audit_log.
+
+Different service role keys, different connection strings.
+
+**Reasoning:**
+
+1. Emergent correctly flagged that Supabase doing double duty creates
+   a trust problem the day an AI-coordination query can see
+   help_requests.
+2. Two schemas with separate RLS is the minimum fix. Two projects is
+   the hard fix. A misconfigured RLS policy cannot cross a project
+   boundary.
+3. Free tier allows multiple projects. Cost is zero.
+4. Trust-first brand means structural isolation, not procedural.
+
+**Raised by:** Emergent (build flag on T-005)
+
+**Decided by:** Claude (driver) with founder confirmation
+
+**Status:** Confirmed. Build proceeds.
+
+---
+
+## 2026-09-27 — Bot Defense for Phase 0 Forms
+
+**Decision:** Every form includes a honeypot field and API-route rate
+limiting. No CAPTCHA.
+
+**Specifics:**
+
+- **Honeypot field:** Hidden input named "website" (or similar). Real
+  users won't fill it. Bots will. If populated, reject silently.
+- **Rate limit:** Max 3 submissions per IP per hour. Vercel built-in
+  or in-memory counter for Phase 0.
+- **No CAPTCHA.** It kills trust-first UX and isn't needed at Phase 0
+  volume.
+- **IP and user-agent storage** is for audit, not protection.
+
+**Reasoning:** A waitlist with no bot defense fills with garbage on
+day one. CAPTCHA is the wrong tradeoff for a trust-first brand.
+Honeypot + rate limit is standard, invisible to users, and free.
+
+**Raised by:** Emergent (build flag on T-005)
+
+**Decided by:** Claude (driver) with founder confirmation
+
+**Status:** Confirmed. Part of T-005.
+
+---
+
 ## 2026-09-27 — Phase 0 Hosting and Forms
 
 **Decision:**
