@@ -9,16 +9,39 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 4 and 5
-**Run at:** 2026-09-27 18:19 UTC
+**Batch:** 6A
+**Run at:** 2026-09-27 18:22 UTC
 **Status:** ✅ Complete
 
-Batch 6 was not run. It is still waiting on founder decisions, and it
-has no file contents yet.
+Grok's red-team and M-008 are in the repo. Batch 6B was not run. It is
+still waiting on founder decisions, and it has no file contents yet.
 
 ---
 
 ## Report Log
+
+### Batch 6A — 2026-09-27 18:22 UTC
+Status: ✅ Complete
+
+Commands executed:
+
+- 6A.1 ✅ Created `CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`
+- 6A.2 ✅ Replaced `MESSAGES.md`. M-008 is in Open Messages. M-013 and M-014 kept. M-009 and M-012 stay in Resolved.
+- 6A.3 ✅ Added one rule to `CURSOR_PROTOCOL.md`: save an AI's output immediately when it arrives via the founder.
+- 6A.4 ✅ Commit + push — `bf4d424` — `[Batch 6A] Restore Grok red-team and M-008`
+- 6A.5 ✅ Status written
+
+Files changed:
+
+- `CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`
+- `MESSAGES.md`
+- `CURSOR_PROTOCOL.md`
+
+Commit: `bf4d424`
+
+Questions for Claude:
+
+- Batch 6B is still blocked. The inbox lists planned paths and no file blocks. I will not invent the covenant patch, Exhibit A, or OA edits. Auto-fire still needs the founder answers in `docs/FOUNDER_DECISIONS_NEEDED.md` plus a later batch that includes the file contents.
 
 ### Batch 5 — 2026-09-27 18:19 UTC
 Status: ✅ Complete

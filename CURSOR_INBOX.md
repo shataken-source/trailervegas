@@ -1,83 +1,77 @@
 # Cursor Inbox — Command Queue
 
 **How to use:** Cursor reads this file when the founder says "check
-trailervegas for your commands." Execute batches in order. Update
+trailervegas for your commands." Execute open batches in order. Update
 status. Commit and push after each batch.
 
 **Last updated:** 2026-09-27
-**Next batch to execute:** Batch 6 (waiting on founder decisions)
+**Next batch to execute:** Batch 6B (blocked on founder decisions)
 
 ---
 
 ## Batch 4 — Set Up Cursor Protocol
 
-**Status:** ✅ Done
-**Issued by:** Claude
-**Purpose:** Set up Cursor as the local file executor.
-
-### Commands
-
-**4.1 — Save `HANDOFF.md`** — ✅ Done
-
-**4.2 — Save `CURSOR_PROTOCOL.md`** — ✅ Done
-
-**4.3 — Save `CURSOR_OUTBOX.md`** — ✅ Done
-
-**4.4 — Update `README.md`** — ✅ Done
-- Added `**If you're new here, read HANDOFF.md first.**` by replacing
-  README with the supplied file.
-
-**4.5 — Commit + push** — ✅ Done
-- Message: `[Batch 4] Set up Cursor protocol and handoff`
-
-**4.6 — Write status to `CURSOR_OUTBOX.md`** — ✅ Done
+**Status:** ✅ Done (commit ec9d5c3)
 
 ---
 
-## Batch 5 — Save Claude's Red-Team Response
+## Batch 5 — Claude's Red-Team Response
 
-**Status:** ✅ Done
-**Issued by:** Claude
-**Purpose:** Save driver response to Grok's red-team. Update decisions
-log, messages, tasks. Add founder decisions file.
-
-### Commands
-
-**5.1 — Save `docs/DECISIONS_LOG.md`** — ✅ Done
-
-**5.2 — Save `CONTRIBUTIONS/claude/2026-09-27-redteam-response.md`** — ✅ Done
-
-**5.3 — Save `docs/FOUNDER_DECISIONS_NEEDED.md`** — ✅ Done
-
-**5.4 — Save `MESSAGES.md`** — ✅ Done
-
-**5.5 — Save `TASKS.md`** — ✅ Done
-
-**5.6 — Commit + push** — ✅ Done
-- Message: `[Batch 5] Claude response to Grok red-team`
-
-**5.7 — Write status to `CURSOR_OUTBOX.md`** — ✅ Done
+**Status:** ✅ Done (commit 51d1202)
 
 ---
 
-## Batch 6 — Covenant Patch (Queued)
+## Batch 6A — Restore Grok's Output
 
-**Status:** ⏸️ Waiting on founder decisions (T-010)
+**Status:** ✅ Done (commit bf4d424)
+**Issued by:** Claude
+**Purpose:** Grok's red-team file and message M-008 never made it into
+the repo. Founder pasted the output to Claude but not to Cursor. This
+batch restores the missing artifacts.
+
+### Commands
+
+**6A.1 — Save `CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`**
+- Action: Create (new file)
+- Content: See block below in this batch
+
+**6A.2 — Save `MESSAGES.md`**
+- Action: Replace
+- Content: See block below in this batch
+- Change: Add M-008 (Grok → Founder). Keep M-013 and M-014. Move M-008
+  through M-012 to appropriate sections.
+
+**6A.3 — Update `CURSOR_PROTOCOL.md`**
+- Action: Update — add one rule at the bottom of the Rules section
+- Line to add: `- When an AI's output arrives via the founder, save it
+  immediately. Do not route through another AI first.`
+
+**6A.4 — Commit + push**
+- Message: `[Batch 6A] Restore Grok red-team and M-008`
+
+**6A.5 — Write status to `CURSOR_OUTBOX.md`**
+
+---
+
+## Batch 6B — Covenant Patch (Queued)
+
+**Status:** ⏸️ Blocked on founder decisions (T-010)
 **Auto-triggers when:** Founder edits `docs/FOUNDER_DECISIONS_NEEDED.md`
-with the four answers and says "check trailervegas for your commands."
+with the four answers, commits, and says "check trailervegas for your
+commands."
 
-**Planned commands (to be filled by Claude):**
+**Planned commands (Claude will populate):**
 - Save `CONTRIBUTIONS/claude/2026-09-27-covenant-patch-proposal.md`
 - Save `docs/EXHIBIT_A_STUB.md`
 - Save updated `docs/TRUST_COVENANT.md`
 - Save updated `docs/OPERATING_AGREEMENT_CLAUSE.md`
 - Commit + push
 
-*(Claude will populate this section once the four decisions are made.)*
-
 ---
 
 ## Command History
 
-- Batch 5 — ✅ Done — 2026-09-27 — `51d1202` — Claude red-team response, decisions, tasks, messages
-- Batch 4 — ✅ Done — 2026-09-27 — `ec9d5c3` — Cursor protocol, handoff, README pointer
+- **Batch 4** — Set up Cursor protocol and handoff — ✅ ec9d5c3
+- **Batch 5** — Claude response to Grok red-team — ✅ 51d1202
+- **Batch 5b** — Cursor status report — ✅ 946c810
+- **Batch 6A** — Restore Grok red-team and M-008 — ✅ bf4d424
