@@ -477,10 +477,11 @@ id, email, corridor, created_at
 
 ## Questions for the Founder
 
-1. **Corridor:** I-15 or I-10? (Spec assumes I-15.)
-2. **Hosting:** Netlify, Vercel, or GitHub Pages?
-3. **Form backend:** Formspree, Netlify Forms, or custom?
-4. **Domain:** Is `trailervegas.com` pointed at the hosting provider yet?
+1. **Corridor:** I-15. Decided 2026-09-27 (T-003).
+2. **Hosting:** Vercel. Decided 2026-09-27.
+3. **Form backend:** Formspree. Decided 2026-09-27.
+4. **Domain:** `trailervegas.com` is not pointed at Vercel yet. Leave
+   DNS alone until a Vercel URL exists.
 5. **Logo:** Is there a logo, or use placeholder wordmark?
 6. **Photos:** Any photos for seeded listings, or use placeholders?
 

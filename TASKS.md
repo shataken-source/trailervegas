@@ -22,14 +22,16 @@
 - **Assigned to:** Emergent
 - **Priority:** 🔴 Critical
 - **Status:** ⏸️ Blocked
-- **Depends on:** Founder hosting decision, seed list verification
+- **Depends on:** Seed-list phone verification. Hosting is decided:
+  Vercel. Forms: Formspree. Domain is not pointed yet.
 - **Deadline:** 2026-10-05
 - **Description:** Build the homepage per
   `docs/EMERGENT_BUILD_SPEC.md`. Start with homepage only. Deliver
   preview URL.
 - **Note:** Do not hardcode "binding commitment" in footer (M-011).
-  Use "public promise — legal review pending." Covenant v1.1 is now
-  the source.
+  Use "public promise — legal review pending." Covenant v1.2 is the
+  source. Do not change `trailervegas.com` DNS until a Vercel URL
+  exists.
 - **Output:** Live preview +
   `CONTRIBUTIONS/emergent/2026-09-27-homepage.md`
 

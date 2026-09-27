@@ -5,6 +5,23 @@ Newest at top.
 
 ---
 
+## 2026-09-27 — Phase 0 Hosting and Forms
+
+**Decision:**
+
+1. **Hosting:** Vercel. Already paid for by other projects.
+2. **Forms:** Formspree. Works with Vercel. No custom backend.
+3. **Domain:** `trailervegas.com` is not pointed at Vercel. It currently
+   shows a for-sale landing page. Do not change DNS until a Vercel
+   project exists. Founder will point it after that.
+
+**Raised by:** Founder
+
+**Status:** Confirmed. T-005 is still blocked on seed-list phone
+verification. The 10 service-provider numbers are placeholders.
+
+---
+
 ## 2026-09-27 — Batch 8 Correction
 
 **Decision:** The Batch 8 status entry marking `docs/AUTOMATION_PLAN.md`
