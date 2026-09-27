@@ -37,6 +37,7 @@ wants-to-become-a-co-op. Confirm with a co-op lawyer.
 
 **Your call:**
 
+fOUNDERS CALL - DELEWARE
 
 
 ---
@@ -66,7 +67,13 @@ is more trust than another manifesto paragraph.
 
 **Your call:**
 
-
+Brian Walker
+Mark Swords
+Phiip Whitley
+John Davis
+Trina Gordon
+April Davis
+ 
 
 ---
 
@@ -94,6 +101,8 @@ legal review.
 
 **Your call:**
 
+Founders Decision : Publish rough draft by 2026-10-15, aligned with
+legal review.
 
 
 ---
@@ -126,7 +135,7 @@ public covenant?
 
 **Your call:**
 
-
+Founders Decision : Definitley C
 
 ---
 
@@ -139,6 +148,8 @@ public covenant?
 4. Emergent builds the footer with confidence.
 5. Gemini's corridor research lands; we lock the map.
 6. Round 1 closes. Round 2 begins.
+
+Foundrs Decision : 1
 
 ---
 
