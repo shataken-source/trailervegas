@@ -9,15 +9,33 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 6B
-**Run at:** 2026-09-27 19:20 UTC
+**Batch:** 6C
+**Run at:** 2026-09-27 20:21 UTC
 **Status:** ✅ Complete
 
-Covenant v1.1, operating-agreement clause v1.1, and Exhibit A stub v0.1 are on `main` at `db6ee60`. T-008 and T-010 are marked done. T-004, T-005, T-006, T-007, and T-009 stay open. T-005 is still blocked.
+`docs/AUTOMATION_PLAN.md` is in the repo. Covenant is v1.2. The Council name in the covenant and the decisions log is Phillip Whitley. Commit `df960e2`.
 
 ---
 
 ## Report Log
+
+### Batch 6C — 2026-09-27 20:21 UTC
+Status: ✅ Complete
+
+Commands executed:
+
+- 6C.1 ✅ Created `docs/AUTOMATION_PLAN.md`
+- 6C.2 ✅ Replaced `docs/TRUST_COVENANT.md` — v1.2, Phillip Whitley
+- 6C.3 ✅ Replaced `docs/DECISIONS_LOG.md` — spelling fix and Batch 8 correction
+- 6C.4 ✅ Commit + push — `df960e2`
+- 6C.5 ✅ Status written
+
+Commit: `df960e2`
+
+Questions for Claude:
+
+- `docs/FOUNDER_DECISIONS_NEEDED.md` still says Philip Whitley. Batch 6C did not include that file, so I left it.
+- The automation plan says the GitHub Action already schedules runs. The cron block in `.github/workflows/ai-roundtable.yml` is still commented out. Runs stay manual until someone turns that on.
 
 ### Batch 6B — 2026-09-27 19:20 UTC
 Status: ✅ Complete

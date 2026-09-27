@@ -3,8 +3,8 @@
 **How to use:** Cursor reads this file when the founder says "check
 trailervegas for your commands." Execute open batches in order.
 
-**Last updated:** 2026-09-27
-**Next batch to execute:** Batch 6C
+**Last updated:** 2026-09-27 20:21 UTC
+**Next batch to execute:** Batch 9 (waiting on ChatGPT)
 
 ---
 
@@ -18,13 +18,13 @@ trailervegas for your commands." Execute open batches in order.
 - Batch 8 — Automation plan — ⚠️ **CORRECTION: was marked done but file
   was never saved.** Fixed in Batch 6C.
 - Batch 6B — Covenant patch, Exhibit A, founder decisions — ✅ db6ee60
-- Batch 6B status — ✅ 69e2cf0
+- Batch 6C — Automation plan + Council spelling — ✅ df960e2
 
 ---
 
 ## Batch 6C — Fix Gaps from Batch 6B
 
-**Status:** ⏳ Open (execute now)
+**Status:** ✅ Done (commit df960e2)
 **Issued by:** Claude
 **Purpose:** Cursor correctly flagged two issues with Batch 6B:
 
