@@ -5,19 +5,17 @@ Newest at top.
 
 ---
 
-## 2026-09-27 — Grok Red-Team Completed (T-002)
+## 2026-09-27 — Grok Red-Team Accepted (T-002)
 
-**Decision:** Red-team findings accepted as valid. Fifteen findings,
-three Critical, seven High. The covenant and OA need patches before
-either can be called "binding."
+**Decision:** All 15 findings accepted. No pushback. Three Critical,
+seven High, five Medium/Low.
 
-**Reasoning:** Grok found real holes that a skeptical RVer, a lawyer, or
-a future acquirer could drive through. The three Critical findings
+**Reasoning:** Grok found real holes a skeptical RVer, a lawyer, or a
+future acquirer could drive through. The three Critical findings
 (benefit-corp off-ramp, missing Exhibit A, no standing until Advisory
-Council is seated) are the foundation. Everything else is decoration
-until those are fixed.
+Council is seated) are foundational.
 
-**Raised by:** Grok (task T-002)
+**Raised by:** Grok
 
 **Status:** Accepted. See
 `CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`.
@@ -26,125 +24,111 @@ until those are fixed.
 
 ## 2026-09-27 — "Binding Commitment" Language Removed Pending T-006
 
-**Decision:** The footer line "This covenant is a binding commitment.
-It is not marketing." is downgraded to "This is the public promise.
-Legal review pending. See the draft operating agreement."
+**Decision:** Footer line downgraded to "This is the public promise.
+Legal review pending."
 
-**Reasoning:** Grok's Finding 15. A page on GitHub is not binding until
-the OA is filed in a chosen state with an Exhibit A and humans who have
-standing. Saying "binding" before those exist is the sentence a blogger
-will quote when this gets messy.
+**Reasoning:** Grok Finding 15. A GitHub page is not binding until the
+OA is filed in a chosen state with an Exhibit A and humans with
+standing.
 
 **Raised by:** Grok
 
-**Status:** Confirmed. Emergent notified via M-011.
+**Status:** Confirmed. Emergent notified (M-011).
 
 ---
 
 ## 2026-09-27 — Advisory Council Seating Elevated to Critical
 
-**Decision:** Seating at least three named Advisory Council members
-before launch is a Critical priority, not a Phase 2 item.
+**Decision:** Three named Council members before launch is Critical, not
+Phase 2.
 
-**Reasoning:** Grok's Finding 3. The specific-performance clause in OA
-X.7 has no plaintiff until the Council exists. The Council's veto over
-ranking, data, and ad policy is the only pre-member check on founder
-power. Without it, "community-governed" is LARPing.
+**Reasoning:** Grok Finding 3. Specific-performance clause has no
+plaintiff without a Council. "Community-governed" is a slogan, not a
+structure.
 
 **Raised by:** Grok
 
-**Status:** Confirmed. Founder decision needed (T-010).
+**Status:** Confirmed. Founder decision (T-010).
 
 ---
 
 ## 2026-09-27 — Exhibit A Stub Elevated to Critical
 
-**Decision:** A one-page Exhibit A stub — even ugly, even rough — must
-exist before the covenant goes in the footer.
+**Decision:** One-page Exhibit A stub must exist before covenant goes in
+footer.
 
-**Reasoning:** Grok's Finding 2. The conversion plan is the whole fight.
-Asking people to trust a conversion whose terms are TBD is the same move
-the incumbents made.
+**Reasoning:** Grok Finding 2. Conversion plan is the whole fight.
+Trusting a TBD is the incumbent move.
 
 **Raised by:** Grok
 
-**Status:** Confirmed. Founder decision needed on draft date (T-010).
+**Status:** Confirmed. Founder decision on date (T-010).
 
 ---
 
-## 2026-09-27 — Help Form Consent Language Must Be Added to Covenant
+## 2026-09-27 — Help Form Consent Paragraph Added to Covenant
 
-**Decision:** Covenant §3 must add a paragraph explaining that help
-form submissions are shared with matched providers. Same sentence
-appears in the form, the confirmation email, and the provider email.
+**Decision:** Covenant §3 adds a paragraph explaining help form
+submissions are shared with matched providers. Same sentence in form,
+confirmation email, provider email.
 
-**Reasoning:** Grok's Finding 12. The covenant currently says personal
-data is never shared unless the user explicitly asked. The help form
-is the product. This is the one place a real user could catch us being
-hypocrites about data.
+**Reasoning:** Grok Finding 12. The covenant says data is never shared
+unless the user asked. The help form is the product. This is the one
+place a real user could catch us being hypocrites.
 
 **Raised by:** Grok
 
-**Status:** Confirmed. Patch to be applied in T-008.
+**Status:** Confirmed. Patch in T-008.
 
 ---
 
-## 2026-09-27 — Covenant/OA Amendment Paths Must Be Reconciled
+## 2026-09-27 — Covenant/OA Amendment Paths Reconciled
 
-**Decision:** Covenant §3 and OA X.3 disagree on how to amend "what
-will never change." Comment period is not a veto. Align both documents
-to one stricter path.
+**Decision:** Covenant §3 and OA X.3 disagree. Comment period is not a
+veto. Single stricter path.
 
-**Reasoning:** Grok's Finding 4. If the public covenant and the legal
-operating agreement disagree, the weaker document wins in the court of
-public opinion — and possibly in a real court.
+**Reasoning:** Grok Finding 4. If the public covenant and legal OA
+disagree, the weaker document wins.
 
 **Raised by:** Grok
 
-**Status:** Confirmed. Task T-008 assigned to Claude.
+**Status:** Confirmed. T-008 assigned to Claude.
 
 ---
 
 ## 2026-09-27 — Verified Contribution Definition Locked in Article X
 
-**Decision:** The definition of "Verified Contribution" (currently in
-"Company policies") is moved into Article X. Changing it requires the
-same supermajority as amending Article X.
+**Decision:** Definition moves from "Company policies" into Article X.
+Changing it requires same supermajority as amending Article X.
 
-**Reasoning:** Grok's Finding 5. Policies are not the operating
-agreement. The company that wants to avoid a trigger should not control
-the definition of what fires it.
+**Reasoning:** Grok Finding 5. The company that wants to avoid a trigger
+should not control the definition of what fires it.
 
 **Raised by:** Grok
 
-**Status:** Confirmed. Patch to be applied in T-008.
+**Status:** Confirmed. Patch in T-008.
 
 ---
 
 ## 2026-09-27 — 90-Day Conversion Deadline Extended
 
-**Decision:** 90 days to file conversion documents and publish a dated
-plan. 12 months to complete the conversion. Specific performance
-attaches to the filing duty, not the close.
+**Decision:** 90 days to file conversion documents. 12 months to close.
+Specific performance attaches to filing, not closing.
 
-**Reasoning:** Grok's Finding 7. Real LLC → co-op conversions involve
-securities questions, tax, new articles, membership agreements, and
-investor consents. 90 days to close is a built-in breach.
+**Reasoning:** Grok Finding 7. Real LLC → co-op conversions involve
+securities, tax, new articles, membership agreements. 90 days to close
+is a built-in breach.
 
 **Raised by:** Grok
 
-**Status:** Confirmed. Patch to be applied in T-008.
+**Status:** Confirmed. Patch in T-008.
 
 ---
 
 ## 2026-09-27 — Output Contract: Complete Files
 
-**Decision:** Every AI outputs complete files (not snippets, not diffs).
-The founder replaces the files in the repo. No GitHub integration needed.
-
-**Reasoning:** Founder's correction — AIs can't write to GitHub, but they
-can output complete files that the founder saves. Simpler, fewer errors,
-works with any AI.
+**Decision:** Every AI outputs complete files. Founder replaces.
+No GitHub integration needed.
 
 **Raised by:** Founder
 
@@ -154,46 +138,34 @@ works with any AI.
 
 ## 2026-09-27 — Legal Structure: LLC Now, Co-op Later
 
-**Decision:** Start as a for-profit LLC. Commit publicly to converting to
-a community-owned cooperative upon hitting defined triggers.
+**Decision:** Start as for-profit LLC. Commit publicly to converting to
+community-owned cooperative upon hitting triggers.
 
-**Reasoning:** LLC is fast, cheap, and lets us build. Co-op is the right
-end state but would kill the project in infancy due to complexity and
-funding constraints. The conversion promise gives the trust story teeth.
+**Reasoning:** LLC is fast, cheap. Co-op is the right end state but
+would kill the project in infancy. The promise gives the trust story
+teeth.
 
-**Raised by:** Founder
+**Raised by:** Founder. Claude proposed the Trust Covenant. Grok
+identified escape hatches to close.
 
-**AI input:** Claude proposed the Trust Covenant concept. Grok's red-team
-identified that the current draft has several escape hatches that must
-be closed before it can be called binding.
-
-**Status:** Confirmed pending legal review (task T-006).
+**Status:** Confirmed pending legal review (T-006).
 
 ---
 
 ## 2026-09-27 — Scope: One Corridor First
 
-**Decision:** Phase 0 is the I-15 corridor. Not nationwide. Not Las Vegas
-only.
+**Decision:** Phase 0 is I-15. Not nationwide.
 
-**Reasoning:** Empty maps look abandoned. Density is the method.
-Nationwide is the destination.
+**Raised by:** Claude
 
-**Raised by:** Claude (synthesizing founder's earlier notes)
-
-**Status:** Confirmed. Final corridor choice pending Gemini research
-(task T-003).
+**Status:** Confirmed. Final corridor choice pending Gemini (T-003).
 
 ---
 
 ## 2026-09-27 — Feature Scope: Reviews + Services Only in V1
 
 **Decision:** V1 is verified campground reviews + service provider
-directory for one corridor. No Q&A. No "who's nearby" map. No
-marketplace.
-
-**Reasoning:** Each feature has its own chicken-and-egg problem. Building
-all at once means every feature launches half-empty.
+directory. No Q&A. No "who's nearby." No marketplace.
 
 **Raised by:** Claude
 
@@ -203,45 +175,29 @@ all at once means every feature launches half-empty.
 
 ## 2026-09-27 — Trust Covenant Published
 
-**Decision:** The TrailerVegas Trust Covenant is a public document,
-linked in the footer of every page, versioned, with a changelog.
-
-**Reasoning:** No incumbent can publish a document like this because
-their cap table won't allow it. It's the differentiator.
+**Decision:** Public document, linked in footer, versioned.
 
 **Raised by:** Claude
 
-**Status:** Draft complete. See `docs/TRUST_COVENANT.md`. Pending legal
-review and T-008 reconciliation.
+**Status:** Draft complete. Pending T-006 + T-008.
 
 ---
 
 ## 2026-09-27 — Project Name Confirmed
 
-**Decision:** Domain is `trailervegas.com`. Name is "TrailerVegas."
+**Decision:** Domain `trailervegas.com`. Name "TrailerVegas."
 
-**Reasoning:** Playful, memorable, "Nashvegas"-style wordplay. Not locked
-to Las Vegas geographically. Works nationwide.
+**Raised by:** Founder. Claude flagged USPTO search.
 
-**Raised by:** Founder
-
-**AI input:** Claude noted LVCVA has litigated over "Vegas" branding
-before. Recommendation: real USPTO search before spending on branding.
-"Nashvegas" style wordplay is common and generally fine.
-
-**Status:** Confirmed. USPTO search pending (task T-007).
+**Status:** Confirmed. USPTO search pending (T-007).
 
 ---
 
 ## 2026-09-27 — Repo Setup
 
-**Decision:** Repo at https://github.com/shataken-source/trailervegas.
-Public. Local at `C:\cevict-live\apps\trailervegas`.
+**Decision:** Public repo at github.com/shataken-source/trailervegas.
+Local at C:\cevict-live\apps\trailervegas.
 
-**Reasoning:** Public so AI collaborators can read files via
-raw.githubusercontent.com URLs without auth. Local folder is nested
-inside the cevict-live tree but is its own git repo.
+**Raised by:** Founder + Cursor.
 
-**Raised by:** Founder + local Cursor agent
-
-**Status:** Confirmed. Repo initialized and operational.
+**Status:** Confirmed. Operational.

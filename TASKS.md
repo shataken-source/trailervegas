@@ -7,41 +7,13 @@
 
 ## Active Tasks
 
-### T-001 — Finish I-15 Seed List
-- **Assigned to:** Claude
-- **Priority:** 🟠 High
-- **Status:** ✅ Done
-- **Depends on:** Nothing
-- **Deadline:** 2026-09-30
-- **Description:** Finish verifying the 25 parks and 10 providers in
-  `research/I15_SEED_LIST.md`. Replace placeholder phone numbers with real
-  ones or remove. Add descriptions.
-- **Output:** `research/I15_SEED_LIST.md` (complete — pending founder
-  verification of phone numbers before publishing)
-
----
-
-### T-002 — Trust Covenant Red-Team
-- **Assigned to:** Grok
-- **Priority:** 🔴 Critical
-- **Status:** ⏳ Open
-- **Depends on:** Nothing
-- **Deadline:** 2026-09-28
-- **Description:** Read `docs/TRUST_COVENANT.md` and
-  `docs/OPERATING_AGREEMENT_CLAUSE.md`. Find the weasel language. Where
-  could a future founder wiggle out of the conversion commitment? What
-  would a skeptical RVer hate? Be brutal.
-- **Output:** `CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`
-
----
-
 ### T-003 — Corridor Research: I-15 vs I-10
 - **Assigned to:** Gemini
 - **Priority:** 🟠 High
 - **Status:** ⏳ Open
 - **Depends on:** Nothing
 - **Deadline:** 2026-09-29
-- **Description:** Research I-15 vs I-10 for RV traffic, service gaps, and
+- **Description:** Research I-15 vs I-10 for RV traffic, service gaps,
   SEO opportunity. Which should Phase 0 focus on? Cite sources.
 - **Output:** `CONTRIBUTIONS/gemini/2026-09-27-corridor-research.md`
 
@@ -53,9 +25,8 @@
 - **Status:** ⏳ Open
 - **Depends on:** Nothing
 - **Deadline:** 2026-09-29
-- **Description:** Generate 10 alternative taglines. Warm, irreverent, not
-  corporate. No "adventure awaits" clichés. Current: "Park it. Share it.
-  Live it."
+- **Description:** Generate 10 alternative taglines. Warm, irreverent,
+  not corporate. No "adventure awaits" clichés.
 - **Output:** `CONTRIBUTIONS/chatgpt/2026-09-27-taglines.md`
 
 ---
@@ -64,23 +35,25 @@
 - **Assigned to:** Emergent
 - **Priority:** 🔴 Critical
 - **Status:** ⏸️ Blocked
-- **Depends on:** T-001 (seed list), founder confirmation of hosting
+- **Depends on:** T-001 (seed list), founder hosting decision
 - **Deadline:** 2026-10-05
-- **Description:** Build the homepage per `docs/EMERGENT_BUILD_SPEC.md`.
-  Start with homepage only. Deliver preview URL.
-- **Output:** Live preview + `CONTRIBUTIONS/emergent/2026-09-27-homepage.md`
+- **Description:** Build the homepage per
+  `docs/EMERGENT_BUILD_SPEC.md`. Start with homepage only. Deliver
+  preview URL.
+- **Output:** Live preview +
+  `CONTRIBUTIONS/emergent/2026-09-27-homepage.md`
 
 ---
 
-### T-006 — Legal Review of Trust Covenant & Operating Agreement Clause
+### T-006 — Legal Review of Trust Covenant & OA Clause
 - **Assigned to:** Founder (human lawyer)
 - **Priority:** 🔴 Critical
 - **Status:** ⏳ Open
-- **Depends on:** T-002 (Grok red-team first)
+- **Depends on:** T-002 (done), T-008 (patch), T-010 (decisions)
 - **Deadline:** 2026-10-15
-- **Description:** A human lawyer reviews `docs/TRUST_COVENANT.md` and
-  `docs/OPERATING_AGREEMENT_CLAUSE.md`. Confirms the co-op conversion
-  clause is legally enforceable in the chosen state.
+- **Description:** Human lawyer reviews `docs/TRUST_COVENANT.md` and
+  `docs/OPERATING_AGREEMENT_CLAUSE.md`. Hand them Grok's red-team with
+  the two drafts. Do not treat the current text as already tight.
 - **Output:** Founder notes in `docs/DECISIONS_LOG.md`
 
 ---
@@ -91,25 +64,73 @@
 - **Status:** ⏳ Open
 - **Depends on:** Nothing
 - **Deadline:** 2026-10-10
-- **Description:** Search USPTO for existing "TrailerVegas" or similar
-  marks. Note any conflicts, especially in Class 35 (advertising/business)
-  and Class 43 (lodging).
+- **Description:** Search USPTO for "TrailerVegas" or similar marks.
+  Note conflicts in Class 35 and Class 43.
 - **Output:** Founder notes in `docs/DECISIONS_LOG.md`
+
+---
+
+### T-008 — Reconcile Covenant with OA Article X
+- **Assigned to:** Claude
+- **Priority:** 🔴 Critical
+- **Status:** ⏳ Open
+- **Depends on:** T-002 (done), T-010 (founder decisions)
+- **Deadline:** 2026-10-02
+- **Description:** Align Covenant §3 with OA X.3. Lock Verified
+  Contribution in Article X. Patch in response to Grok findings 1–8,
+  12, 13, 15. Do not invent a new conversion model.
+- **Output:** Patch proposal file, then updated
+  `docs/TRUST_COVENANT.md` and
+  `docs/OPERATING_AGREEMENT_CLAUSE.md`
+
+---
+
+### T-009 — Rewrite Covenant §6 Lead-Fee Language
+- **Assigned to:** ChatGPT
+- **Priority:** 🟡 Medium
+- **Status:** ⏳ Open
+- **Depends on:** T-002 (done)
+- **Deadline:** 2026-10-03
+- **Description:** Optional after T-004. Keep qualified lead fees as a
+  future revenue line. Make it sound like a consented switchboard, not
+  the lead farms the manifesto attacks.
+- **Output:** `CONTRIBUTIONS/chatgpt/2026-09-27-covenant-section6.md`
+  (Claude applies if founder accepts)
+
+---
+
+### T-010 — Founder Decisions That Unblock Covenant
+- **Assigned to:** Founder
+- **Priority:** 🔴 Critical
+- **Status:** ⏳ Open
+- **Depends on:** T-002 (done)
+- **Deadline:** 2026-10-05
+- **Description:** Answer the 4 decisions in
+  `docs/FOUNDER_DECISIONS_NEEDED.md`: entity state, first three
+  Council candidates, Exhibit A date, benefit-corp off-ramp. Edit the
+  file, commit, tell Cursor to check for commands.
+- **Output:** Updated `docs/FOUNDER_DECISIONS_NEEDED.md`
 
 ---
 
 ## Completed Tasks
 
 - **T-001** — Finish I-15 Seed List — ✅ 2026-09-27 — Claude
+- **T-002** — Trust Covenant Red-Team — ✅ 2026-09-27 — Grok
 
 ---
 
 ## Check-In Log
 
-*(Every AI signs in here. Newest at top.)*
+*(Newest at top.)*
 
+- 2026-09-27 — Claude (Driver) responded to Grok's red-team. All 15
+  findings accepted. 8 new decisions logged. Batch 5 files queued in
+  CURSOR_INBOX.md. Waiting on founder decisions (T-010) to fire Batch 6.
+- 2026-09-27 18:15 UTC — Grok checked in, completed T-002, left 4
+  messages (M-008 to M-012) and 3 tasks (T-008, T-009, T-010).
 - 2026-09-27 — Claude checked in. Set up roundtable system. Completed
-  T-001 (seed list). Left 6 tasks for others. Ready for contributions.
+  T-001 (seed list). Left 6 tasks for others.
 
 ---
 
