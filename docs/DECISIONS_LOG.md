@@ -5,6 +5,52 @@ Newest at top.
 
 ---
 
+## 2026-09-27 — Supabase Schema and API Routes Delivered (T-013)
+
+**Decision:** The full Supabase schema and the Next.js API route
+specifications are drafted and published.
+
+**Files:**
+- `automation/supabase_schema.sql` — full SQL for both projects
+- `docs/API_ROUTES.md` — Next.js API route specs
+
+**Note:** The two Supabase projects (`trailervegas-users` and
+`trailervegas-roundtable`) have not been created yet. Emergent can
+build against the schema and use local stubs. Projects get created
+before the first real form submission.
+
+**Raised by:** Claude
+
+**Status:** Confirmed. T-013 closed.
+
+---
+
+## 2026-09-27 — Formspree Dropped (Supersedes earlier entry)
+
+**Decision:** Formspree is **not** part of the stack. Forms POST to
+Next.js API routes that write directly to Supabase.
+
+**Supersedes:** The "Hosting: Vercel. Forms: Formspree." note that
+appeared in earlier task notes and an earlier decision log entry
+(tagged below as SUPERSEDED).
+
+**Reasoning:**
+
+1. The stack decision (2026-09-27 — Next.js + Supabase on Vercel)
+   routed PII through our own API for trust reasons.
+2. Formspree routes user data through a third party. That contradicts
+   the Trust Covenant's "we will never sell your data" framing.
+3. Emergent flagged this before building. Cursor flagged the log
+   conflict after Batch 10f.
+
+**Raised by:** Cursor (log conflict on Batch 10f)
+
+**Decided by:** Claude (driver)
+
+**Status:** Confirmed. No Formspree anywhere in Phase 0.
+
+---
+
 ## 2026-09-27 — Supabase Isolation: Two Projects, Not Two Schemas
 
 **Decision:** User PII and the AI roundtable message bus live in
@@ -19,9 +65,8 @@ Different service role keys, different connection strings.
 
 **Reasoning:**
 
-1. Emergent correctly flagged that Supabase doing double duty creates
-   a trust problem the day an AI-coordination query can see
-   help_requests.
+1. Emergent flagged that Supabase doing double duty creates a trust
+   problem the day an AI-coordination query can see help_requests.
 2. Two schemas with separate RLS is the minimum fix. Two projects is
    the hard fix. A misconfigured RLS policy cannot cross a project
    boundary.
@@ -43,17 +88,11 @@ limiting. No CAPTCHA.
 
 **Specifics:**
 
-- **Honeypot field:** Hidden input named "website" (or similar). Real
-  users won't fill it. Bots will. If populated, reject silently.
-- **Rate limit:** Max 3 submissions per IP per hour. Vercel built-in
-  or in-memory counter for Phase 0.
-- **No CAPTCHA.** It kills trust-first UX and isn't needed at Phase 0
-  volume.
-- **IP and user-agent storage** is for audit, not protection.
-
-**Reasoning:** A waitlist with no bot defense fills with garbage on
-day one. CAPTCHA is the wrong tradeoff for a trust-first brand.
-Honeypot + rate limit is standard, invisible to users, and free.
+- Honeypot field: hidden input named "website." Real users won't fill
+  it. Bots will. If populated, reject silently.
+- Rate limit: Max 3 submissions per IP per hour.
+- No CAPTCHA. Kills trust-first UX. Not needed at Phase 0 volume.
+- IP and user-agent stored for audit, not protection.
 
 **Raised by:** Emergent (build flag on T-005)
 
@@ -63,45 +102,82 @@ Honeypot + rate limit is standard, invisible to users, and free.
 
 ---
 
-## 2026-09-27 — Phase 0 Hosting and Forms
+## 2026-09-27 — Brand Assets: Placeholders Only for Phase 0
 
-**Decision:**
+**Decision:** Phase 0 ships with placeholder brand assets. No real
+logo. No photos.
 
-1. **Hosting:** Vercel. Already paid for by other projects.
-2. **Forms:** Formspree. Works with Vercel. No custom backend.
-3. **Domain:** `trailervegas.com` is not pointed at Vercel. It currently
-   shows a for-sale landing page. Do not change DNS until a Vercel
-   project exists. Founder will point it after that.
+**Raised by:** Emergent (asset question on T-005)
 
-**Raised by:** Founder
+**Decided by:** Claude (driver) with founder confirmation
 
-**Status:** Confirmed. T-005 is still blocked on seed-list phone
-verification. The 10 service-provider numbers are placeholders.
+**Status:** Confirmed. Real logo deferred to T-014.
 
 ---
 
-## 2026-09-27 — Batch 8 Correction
+## 2026-09-27 — Legal Pages: Drafts Only, Footer Per M-011
 
-**Decision:** The Batch 8 status entry marking `docs/AUTOMATION_PLAN.md`
-as saved was incorrect. The file was not in the repo. Corrected in
-Batch 6C — file now saved.
+**Decision:** Privacy and Terms ship as clearly-marked DRAFTS. Footer
+says "Public promise — legal review pending. See the Trust Covenant."
 
-**Raised by:** Cursor (caught during Batch 6B verification)
+**Raised by:** Emergent (build question on T-005)
 
-**Status:** Fixed. The `AUTOMATION_PLAN.md` is now in the repo and the
-reference in this log is valid.
+**Decided by:** Claude (driver) with founder confirmation
+
+**Status:** Confirmed.
 
 ---
 
-## 2026-09-27 — Council Name Correction
+## 2026-09-27 — Stack Decision: Next.js + Supabase on Vercel
 
-**Decision:** Third Council candidate is **Phillip Whitley** (two Ls),
-not "Philip Whitley."
+**Decision:** Technical stack for TrailerVegas is:
 
-**Raised by:** Founder
+- Frontend + API: Next.js (deployed on Vercel)
+- Database + auth + storage: Supabase (Postgres)
+- Forms: Next.js API routes that write directly to Supabase
+- No Formspree. No Zapier. No Airtable.
 
-**Status:** Corrected in v1.2 of `docs/TRUST_COVENANT.md` and in this
-log.
+**Raised by:** Emergent (PII trust concern on T-005)
+
+**Decided by:** Claude (driver) with founder confirmation
+
+**Status:** Confirmed. See `docs/STACK.md`.
+
+---
+
+## 2026-09-27 — T-005 Scope: Doorbell Only, Directory Deferred
+
+**Decision:** Phase 0 build includes 10 routes. Directory deferred to
+Phase 0.5 (T-012).
+
+**Raised by:** Emergent (scope question on T-005)
+
+**Decided by:** Claude (driver) with founder confirmation
+
+**Status:** Confirmed.
+
+---
+
+## 2026-09-27 — Tagline Selected: "Good neighbors. Different ZIP codes."
+
+**Decision:** Homepage tagline is "Good neighbors. Different ZIP
+codes." Descriptor: "A nationwide home base for RVers, starting along
+I-15."
+
+**Raised by:** Founder (selection from ChatGPT's T-004)
+
+**Status:** Confirmed. See `docs/BRAND_VOICE.md`.
+
+---
+
+## 2026-09-27 — Descriptor Evolution Rule
+
+**Decision:** The tagline is permanent. The descriptor is a variable
+slot. Geography never goes in the tagline. Only in the descriptor.
+
+**Raised by:** Founder (prompted by Claude)
+
+**Status:** Confirmed. See `docs/BRAND_VOICE.md`.
 
 ---
 
@@ -109,141 +185,47 @@ log.
 
 **Decision:** Four decisions made:
 
-1. **Entity state:** Delaware.
-2. **Advisory Council candidates (6):** Brian Walker, Mark Swords,
-   Phillip Whitley, John Davis, Trina Gordon, April Davis. Public
-   14-day comment window, then confirm 3–5.
-3. **Exhibit A draft date:** 2026-10-15, aligned with legal review.
-4. **Benefit corp off-ramp:** Option C. Removed from public covenant.
-   Kept in Article X as legal fallback with non-negotiable attributes
-   attached.
+1. Entity state: Delaware.
+2. Advisory Council candidates (6): Brian Walker, Mark Swords,
+   Phillip Whitley, John Davis, Trina Gordon, April Davis.
+3. Exhibit A draft date: 2026-10-15.
+4. Benefit corp off-ramp: Option C.
 
 **Raised by:** Founder
 
-**Status:** Confirmed. Patches applied in T-008. See
-`docs/EXHIBIT_A_STUB.md` and updated `docs/TRUST_COVENANT.md` and
-`docs/OPERATING_AGREEMENT_CLAUSE.md`.
+**Status:** Confirmed. Patches applied in T-008.
 
 ---
 
 ## 2026-09-27 — Automation: API-First, Not Browser RPA
 
-**Decision:** When we automate the AI roundtable, we use APIs, not
-browser automation. Supabase as message bus. GitHub for artifacts.
-Orchestrator in Python. Optional GUI dashboard. Emergent stays manual.
+**Decision:** APIs, not browser automation. Supabase as message bus.
+GitHub for artifacts. Orchestrator in Python. Optional GUI dashboard.
+Emergent stays manual.
 
-**Reasoning:** Chat UIs prohibit automated access in their ToS.
-Protocol is stateless — repo is the memory. Prompt caching drops cost
-~80% because context is mostly static. One round per day at ~$0.15–0.20
-with caching. Under $10/month.
+**Raised by:** Founder, clarified by Claude.
 
-**Raised by:** Founder (proposed GUI), Claude (clarified API-first).
-
-**Status:** Confirmed. See `docs/AUTOMATION_PLAN.md`. Build after
-Phase 0 ships, and only when the manual loop starts to hurt.
+**Status:** Confirmed. See `docs/AUTOMATION_PLAN.md`.
 
 ---
 
 ## 2026-09-27 — Corridor: I-15 Locked
 
-**Decision:** Phase 0 corridor is I-15 (San Diego → Las Vegas → Salt
-Lake City → Montana). I-10 rejected.
-
-**Reasoning:** Gemini's research (T-003). I-15 has sustained year-round
-traffic, "rig-killer" topography (Cajon Pass, Baker Grade) that forces
-breakdown scenarios, lower-competition SEO targets, and aligns with
-the domain name.
+**Decision:** Phase 0 corridor is I-15.
 
 **Raised by:** Gemini (T-003)
-
-**Status:** Confirmed. See
-`CONTRIBUTIONS/gemini/2026-09-27-corridor-research.md`.
-
----
-
-## 2026-09-27 — Grok Red-Team Accepted (T-002)
-
-**Decision:** All 15 findings accepted. No pushback.
-
-**Raised by:** Grok
-
-**Status:** Accepted. Patches applied in T-008.
-
----
-
-## 2026-09-27 — "Binding Commitment" Language Removed
-
-**Decision:** Footer line downgraded to "This is the public promise.
-Legal review pending. See the draft operating agreement."
-
-**Raised by:** Grok (Finding 15)
-
-**Status:** Confirmed. Applied in T-008.
-
----
-
-## 2026-09-27 — Advisory Council Nominating Pool Named
-
-**Decision:** Six candidates named for the initial Advisory Council
-pool. Public comment window, then 3–5 confirmed.
-
-**Raised by:** Founder
 
 **Status:** Confirmed.
 
 ---
 
-## 2026-09-27 — Exhibit A Stub Elevated to Critical
+## 2026-09-27 — Grok Red-Team Accepted (T-002)
 
-**Decision:** One-page Exhibit A stub published by 2026-10-15.
+**Decision:** All 15 findings accepted.
 
-**Raised by:** Grok (Finding 2)
+**Raised by:** Grok
 
-**Status:** Confirmed. See `docs/EXHIBIT_A_STUB.md`.
-
----
-
-## 2026-09-27 — Help Form Consent Paragraph Added
-
-**Decision:** Covenant §3 adds explicit help-form data sharing
-paragraph.
-
-**Raised by:** Grok (Finding 12)
-
-**Status:** Confirmed. Applied in T-008.
-
----
-
-## 2026-09-27 — Covenant/OA Amendment Paths Reconciled
-
-**Decision:** Single stricter path. Founder + 2/3 Council + 90-day
-public notice (pre-member). 2/3 members (post-member).
-
-**Raised by:** Grok (Finding 4)
-
-**Status:** Confirmed. Applied in T-008.
-
----
-
-## 2026-09-27 — Verified Contribution Locked in Article X
-
-**Decision:** Definition moves from "Company policies" into Article X.
-Changing it requires the same supermajority as amending Article X.
-
-**Raised by:** Grok (Finding 5)
-
-**Status:** Confirmed. Applied in T-008.
-
----
-
-## 2026-09-27 — 90-Day Conversion Deadline Extended
-
-**Decision:** 90 days to file. 12 months to close. Specific
-performance attaches to filing, not closing.
-
-**Raised by:** Grok (Finding 7)
-
-**Status:** Confirmed. Applied in T-008.
+**Status:** Accepted. Patches applied in T-008.
 
 ---
 
@@ -254,7 +236,7 @@ replaces.
 
 **Raised by:** Founder
 
-**Status:** Confirmed. See `AI_PROTOCOL.md`.
+**Status:** Confirmed.
 
 ---
 
@@ -296,3 +278,16 @@ directory for one corridor.
 **Raised by:** Founder + Cursor
 
 **Status:** Confirmed. Operational.
+
+---
+
+## 2026-09-27 — Hosting Confirmed: Vercel. Forms: Formspree.
+
+**Status:** ⚠️ **SUPERSEDED 2026-09-27.** Forms portion was replaced
+by the Supabase stack decision. Vercel remains the host. Formspree is
+NOT used. See the "Formspree Dropped" entry above.
+
+**Original decision:** Hosting: Vercel. Forms: Formspree. Domain not
+pointed yet.
+
+**Raised by:** Founder

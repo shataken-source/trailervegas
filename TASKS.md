@@ -7,32 +7,27 @@
 
 ## Active Tasks
 
-### T-004 — Tagline Alternatives
-- **Assigned to:** ChatGPT
-- **Priority:** 🟡 Medium
-- **Status:** ⏳ Open
-- **Deadline:** 2026-09-29
-- **Description:** Generate 10 alternative taglines. Warm, irreverent,
-  not corporate. No "adventure awaits" clichés.
-- **Output:** `CONTRIBUTIONS/chatgpt/2026-09-27-taglines.md`
-
----
-
-### T-005 — Build Phase 0 Homepage
+### T-005 — Build Phase 0 Homepage and Doorbell
 - **Assigned to:** Emergent
 - **Priority:** 🔴 Critical
-- **Status:** ⏸️ Blocked
-- **Depends on:** Seed-list phone verification. Hosting is decided:
-  Vercel. Forms: Formspree. Domain is not pointed yet.
+- **Status:** ⏳ Open (unblocked 2026-09-27)
+- **Depends on:** Nothing
 - **Deadline:** 2026-10-05
-- **Description:** Build the homepage per
-  `docs/EMERGENT_BUILD_SPEC.md`. Start with homepage only. Deliver
-  preview URL.
-- **Note:** Do not hardcode "binding commitment" in footer (M-011).
-  Use "public promise — legal review pending." Covenant v1.2 is the
-  source. Do not change `trailervegas.com` DNS until a Vercel URL
-  exists.
-- **Output:** Live preview +
+- **Tech stack:** Next.js + Supabase on Vercel. See `docs/STACK.md`.
+- **Description:** Build the 10-route doorbell. Homepage, manifesto,
+  trust, help, provide, about, contact, privacy, terms, thanks pages.
+- **Notes:**
+  - Public pages: static generation.
+  - Help and provide forms: Next.js API routes → Supabase. See
+    `docs/API_ROUTES.md`.
+  - Bot defense: honeypot + rate limit. No CAPTCHA.
+  - No Formspree, no Zapier, no Airtable.
+  - Footer: "Public promise — legal review pending. See the Trust
+    Covenant." No "binding commitment."
+  - Assets: placeholder wordmark. No photos. No stock.
+  - Schema: see `automation/supabase_schema.sql`. Projects not
+    created yet — build against stubs.
+- **Output:** Vercel preview URL +
   `CONTRIBUTIONS/emergent/2026-09-27-homepage.md`
 
 ---
@@ -41,13 +36,9 @@
 - **Assigned to:** Founder (human lawyer)
 - **Priority:** 🔴 Critical
 - **Status:** ⏳ Open
-- **Depends on:** T-008 (done — v1.1 patched)
+- **Depends on:** T-008 (done)
 - **Deadline:** 2026-10-15
-- **Description:** Human lawyer reviews `docs/TRUST_COVENANT.md` v1.1
-  and `docs/OPERATING_AGREEMENT_CLAUSE.md` v1.1. Hand them Grok's
-  red-team with the two drafts. Confirm Delaware as formation state,
-  co-op conversion path, the four Non-Negotiable Attributes, the
-  third-party enforcer mechanism, and the acquisition bans.
+- **Description:** Human lawyer reviews covenant v1.2 and OA v1.1.
 - **Output:** Founder notes in `docs/DECISIONS_LOG.md`
 
 ---
@@ -58,53 +49,84 @@
 - **Status:** ⏳ Open
 - **Deadline:** 2026-10-10
 - **Description:** Search USPTO for "TrailerVegas" or similar marks.
-  Note conflicts in Class 35 and Class 43.
 - **Output:** Founder notes in `docs/DECISIONS_LOG.md`
 
 ---
 
-### T-008 — Reconcile Covenant with OA Article X
-- **Assigned to:** Claude
-- **Priority:** 🔴 Critical
-- **Status:** ✅ Done — 2026-09-27
-- **Description:** Align Covenant §3 with OA X.3. Lock Verified
-  Contribution in Article X. Patch per Grok findings 1–8, 12, 13, 15.
-- **Output:** `docs/TRUST_COVENANT.md` v1.1,
-  `docs/OPERATING_AGREEMENT_CLAUSE.md` v1.1,
-  `docs/EXHIBIT_A_STUB.md`
-
----
-
-### T-009 — Rewrite Covenant §6 Lead-Fee Language
-- **Assigned to:** ChatGPT
-- **Priority:** 🟡 Medium
-- **Status:** ⏳ Open
-- **Deadline:** 2026-10-03
-- **Description:** Optional after T-004. Keep qualified lead fees as a
-  future revenue line. Make it sound like a consented switchboard, not
-  the lead farms the manifesto attacks.
-- **Output:** `CONTRIBUTIONS/chatgpt/2026-09-27-covenant-section6.md`
-
----
-
-### T-010 — Founder Decisions That Unblock Covenant
+### T-011 — Select Tagline and Review Lead-Fee Copy
+- **Created by:** ChatGPT — 2026-09-27
 - **Assigned to:** Founder
-- **Priority:** 🔴 Critical
+- **Priority:** 🟡 Medium
+- **Status:** 🔄 Partially Complete
+- **Decision A — Tagline:** ✅ "Good neighbors. Different ZIP codes."
+- **Decision B — Lead-fee copy:** ⏳ Pending.
+- **Output:** Founder decisions in `docs/DECISIONS_LOG.md`
+
+---
+
+### T-012 — Build Directory (Phase 0.5)
+- **Created by:** Claude — 2026-09-27
+- **Assigned to:** Emergent (later)
+- **Priority:** 🟡 Medium
+- **Status:** ⏸️ Blocked on seed-list phone verification
+- **Depends on:** T-005, phone verification
+- **Description:** Build places directory, provider directory, and
+  individual listing pages.
+- **Output:** Live preview +
+  `CONTRIBUTIONS/emergent/2026-09-27-directory.md`
+
+---
+
+### T-013 — Supabase Schema + Data Layer
+- **Created by:** Claude — 2026-09-27
+- **Assigned to:** Claude
+- **Priority:** 🟠 High
 - **Status:** ✅ Done — 2026-09-27
-- **Description:** Four decisions answered: Delaware; six Council
-  candidates nominated; Exhibit A by 2026-10-15; Option C (benefit
-  corp as internal fallback).
-- **Output:** `docs/FOUNDER_DECISIONS_NEEDED.md` (answered)
+- **Output:** `automation/supabase_schema.sql`,
+  `docs/API_ROUTES.md`
+- **Completion note:** Both files delivered. Two Supabase projects
+  named in STACK.md (`trailervegas-users`, `trailervegas-roundtable`)
+  are NOT created yet. Emergent builds against stubs. Projects get
+  created before the first real form submission.
+
+---
+
+### T-014 — Real Brand Identity (Phase 1)
+- **Created by:** Claude — 2026-09-27
+- **Assigned to:** Founder (designer TBD)
+- **Priority:** 🟢 Low
+- **Status:** ⏳ Open
+- **Depends on:** Round 2 closed, brand voice firmed
+- **Description:** Commission or design a real logo.
+- **Output:** `docs/BRAND_GUIDE.md` + `/public/logo.svg`
+
+---
+
+### T-015 — Create Supabase Projects
+- **Created by:** Claude — 2026-09-27
+- **Assigned to:** Founder
+- **Priority:** 🟠 High
+- **Status:** ⏳ Open
+- **Depends on:** T-013 (done — schema ready)
+- **Description:** In Supabase dashboard, create two projects:
+  `trailervegas-users` and `trailervegas-roundtable`. Run
+  `automation/supabase_schema.sql` in each project's SQL editor.
+  Generate service role keys. Add to Vercel environment variables.
+- **Notes:** Free tier. Two projects. No shared keys.
+- **Output:** Keys in Vercel. Projects live.
 
 ---
 
 ## Completed Tasks
 
-- **T-001** — Finish I-15 Seed List — ✅ Claude — 2026-09-27
-- **T-002** — Trust Covenant Red-Team — ✅ Grok — 2026-09-27
-- **T-003** — Corridor Research — ✅ Gemini — 2026-09-27
-- **T-008** — Reconcile Covenant with OA — ✅ Claude — 2026-09-27
-- **T-010** — Founder Decisions — ✅ Founder — 2026-09-27
+- **T-001** — I-15 Seed List — ✅ Claude
+- **T-002** — Trust Covenant Red-Team — ✅ Grok
+- **T-003** — Corridor Research — ✅ Gemini
+- **T-004** — Tagline Alternatives — ✅ ChatGPT
+- **T-008** — Reconcile Covenant with OA — ✅ Claude
+- **T-009** — Covenant §6 Lead-Fee Copy — ✅ ChatGPT
+- **T-010** — Founder Decisions — ✅ Founder
+- **T-013** — Supabase Schema + Data Layer — ✅ Claude
 
 ---
 
@@ -112,13 +134,16 @@
 
 *(Newest at top.)*
 
-- 2026-09-27 — Claude (Driver) applied T-008 patch. Covenant v1.1,
-  OA v1.1, Exhibit A stub v0.1 published. T-010 marked done. Round 1
-  has two tasks remaining (T-004 ChatGPT, T-005 Emergent).
-- 2026-09-27 — Founder answered T-010 (Delaware, 6 Council candidates,
-  2026-10-15 Exhibit A, Option C).
-- 2026-09-27 — Gemini completed T-003. I-15 locked.
-- 2026-09-27 — Claude responded to Grok's red-team.
+- 2026-09-27 — Formspree conflict resolved. Old entry marked
+  SUPERSEDED. Supabase schema and API routes delivered (T-013).
+  T-015 added (create the two Supabase projects).
+- 2026-09-27 — Brand assets decided: placeholders only.
+- 2026-09-27 — T-005 unblocked.
+- 2026-09-27 — Stack decided: Next.js + Supabase on Vercel.
+- 2026-09-27 — T-005 scope decided: doorbell only.
+- 2026-09-27 — Founder selected tagline.
+- 2026-09-27 21:44 UTC — ChatGPT completed T-004 and T-009.
+- 2026-09-27 — Gemini completed T-003.
 - 2026-09-27 — Grok completed T-002.
 - 2026-09-27 — Claude set up roundtable, completed T-001.
 
