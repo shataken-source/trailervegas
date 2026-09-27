@@ -5,6 +5,138 @@ Newest at top.
 
 ---
 
+## 2026-09-27 — Grok Red-Team Completed (T-002)
+
+**Decision:** Red-team findings accepted as valid. Fifteen findings,
+three Critical, seven High. The covenant and OA need patches before
+either can be called "binding."
+
+**Reasoning:** Grok found real holes that a skeptical RVer, a lawyer, or
+a future acquirer could drive through. The three Critical findings
+(benefit-corp off-ramp, missing Exhibit A, no standing until Advisory
+Council is seated) are the foundation. Everything else is decoration
+until those are fixed.
+
+**Raised by:** Grok (task T-002)
+
+**Status:** Accepted. See
+`CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`.
+
+---
+
+## 2026-09-27 — "Binding Commitment" Language Removed Pending T-006
+
+**Decision:** The footer line "This covenant is a binding commitment.
+It is not marketing." is downgraded to "This is the public promise.
+Legal review pending. See the draft operating agreement."
+
+**Reasoning:** Grok's Finding 15. A page on GitHub is not binding until
+the OA is filed in a chosen state with an Exhibit A and humans who have
+standing. Saying "binding" before those exist is the sentence a blogger
+will quote when this gets messy.
+
+**Raised by:** Grok
+
+**Status:** Confirmed. Emergent notified via M-011.
+
+---
+
+## 2026-09-27 — Advisory Council Seating Elevated to Critical
+
+**Decision:** Seating at least three named Advisory Council members
+before launch is a Critical priority, not a Phase 2 item.
+
+**Reasoning:** Grok's Finding 3. The specific-performance clause in OA
+X.7 has no plaintiff until the Council exists. The Council's veto over
+ranking, data, and ad policy is the only pre-member check on founder
+power. Without it, "community-governed" is LARPing.
+
+**Raised by:** Grok
+
+**Status:** Confirmed. Founder decision needed (T-010).
+
+---
+
+## 2026-09-27 — Exhibit A Stub Elevated to Critical
+
+**Decision:** A one-page Exhibit A stub — even ugly, even rough — must
+exist before the covenant goes in the footer.
+
+**Reasoning:** Grok's Finding 2. The conversion plan is the whole fight.
+Asking people to trust a conversion whose terms are TBD is the same move
+the incumbents made.
+
+**Raised by:** Grok
+
+**Status:** Confirmed. Founder decision needed on draft date (T-010).
+
+---
+
+## 2026-09-27 — Help Form Consent Language Must Be Added to Covenant
+
+**Decision:** Covenant §3 must add a paragraph explaining that help
+form submissions are shared with matched providers. Same sentence
+appears in the form, the confirmation email, and the provider email.
+
+**Reasoning:** Grok's Finding 12. The covenant currently says personal
+data is never shared unless the user explicitly asked. The help form
+is the product. This is the one place a real user could catch us being
+hypocrites about data.
+
+**Raised by:** Grok
+
+**Status:** Confirmed. Patch to be applied in T-008.
+
+---
+
+## 2026-09-27 — Covenant/OA Amendment Paths Must Be Reconciled
+
+**Decision:** Covenant §3 and OA X.3 disagree on how to amend "what
+will never change." Comment period is not a veto. Align both documents
+to one stricter path.
+
+**Reasoning:** Grok's Finding 4. If the public covenant and the legal
+operating agreement disagree, the weaker document wins in the court of
+public opinion — and possibly in a real court.
+
+**Raised by:** Grok
+
+**Status:** Confirmed. Task T-008 assigned to Claude.
+
+---
+
+## 2026-09-27 — Verified Contribution Definition Locked in Article X
+
+**Decision:** The definition of "Verified Contribution" (currently in
+"Company policies") is moved into Article X. Changing it requires the
+same supermajority as amending Article X.
+
+**Reasoning:** Grok's Finding 5. Policies are not the operating
+agreement. The company that wants to avoid a trigger should not control
+the definition of what fires it.
+
+**Raised by:** Grok
+
+**Status:** Confirmed. Patch to be applied in T-008.
+
+---
+
+## 2026-09-27 — 90-Day Conversion Deadline Extended
+
+**Decision:** 90 days to file conversion documents and publish a dated
+plan. 12 months to complete the conversion. Specific performance
+attaches to the filing duty, not the close.
+
+**Reasoning:** Grok's Finding 7. Real LLC → co-op conversions involve
+securities questions, tax, new articles, membership agreements, and
+investor consents. 90 days to close is a built-in breach.
+
+**Raised by:** Grok
+
+**Status:** Confirmed. Patch to be applied in T-008.
+
+---
+
 ## 2026-09-27 — Output Contract: Complete Files
 
 **Decision:** Every AI outputs complete files (not snippets, not diffs).
@@ -31,8 +163,9 @@ funding constraints. The conversion promise gives the trust story teeth.
 
 **Raised by:** Founder
 
-**AI input:** Claude proposed the Trust Covenant concept — a public
-document with a binding conversion clause in the operating agreement.
+**AI input:** Claude proposed the Trust Covenant concept. Grok's red-team
+identified that the current draft has several escape hatches that must
+be closed before it can be called binding.
 
 **Status:** Confirmed pending legal review (task T-006).
 
@@ -79,7 +212,7 @@ their cap table won't allow it. It's the differentiator.
 **Raised by:** Claude
 
 **Status:** Draft complete. See `docs/TRUST_COVENANT.md`. Pending legal
-review.
+review and T-008 reconciliation.
 
 ---
 
@@ -111,4 +244,4 @@ inside the cevict-live tree but is its own git repo.
 
 **Raised by:** Founder + local Cursor agent
 
-**Status:** Confirmed. Repo initialized.
+**Status:** Confirmed. Repo initialized and operational.
