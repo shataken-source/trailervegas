@@ -5,13 +5,38 @@ Newest at top.
 
 ---
 
+## 2026-09-27 — Batch 8 Correction
+
+**Decision:** The Batch 8 status entry marking `docs/AUTOMATION_PLAN.md`
+as saved was incorrect. The file was not in the repo. Corrected in
+Batch 6C — file now saved.
+
+**Raised by:** Cursor (caught during Batch 6B verification)
+
+**Status:** Fixed. The `AUTOMATION_PLAN.md` is now in the repo and the
+reference in this log is valid.
+
+---
+
+## 2026-09-27 — Council Name Correction
+
+**Decision:** Third Council candidate is **Phillip Whitley** (two Ls),
+not "Philip Whitley."
+
+**Raised by:** Founder
+
+**Status:** Corrected in v1.2 of `docs/TRUST_COVENANT.md` and in this
+log.
+
+---
+
 ## 2026-09-27 — Founder Decisions Answered (T-010)
 
 **Decision:** Four decisions made:
 
 1. **Entity state:** Delaware.
 2. **Advisory Council candidates (6):** Brian Walker, Mark Swords,
-   Philip Whitley, John Davis, Trina Gordon, April Davis. Public
+   Phillip Whitley, John Davis, Trina Gordon, April Davis. Public
    14-day comment window, then confirm 3–5.
 3. **Exhibit A draft date:** 2026-10-15, aligned with legal review.
 4. **Benefit corp off-ramp:** Option C. Removed from public covenant.
@@ -40,7 +65,7 @@ with caching. Under $10/month.
 **Raised by:** Founder (proposed GUI), Claude (clarified API-first).
 
 **Status:** Confirmed. See `docs/AUTOMATION_PLAN.md`. Build after
-Phase 0 ships.
+Phase 0 ships, and only when the manual loop starts to hurt.
 
 ---
 

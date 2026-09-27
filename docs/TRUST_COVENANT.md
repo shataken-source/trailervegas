@@ -1,6 +1,6 @@
 # TrailerVegas Trust Covenant
 
-**Version 1.1 — Published 2026-09-27**
+**Version 1.2 — Published 2026-09-27**
 **This document is public. It is linked in the footer of every page.**
 **It is versioned. Changes are logged.**
 
@@ -146,7 +146,7 @@ The initial Council nominating pool:
 
 - Brian Walker
 - Mark Swords
-- Philip Whitley
+- Phillip Whitley
 - John Davis
 - Trina Gordon
 - April Davis
@@ -277,6 +277,7 @@ Founder, TrailerVegas
 |---|---|---|---|
 | 1.0 | 2026-09-27 | Initial publication | — |
 | 1.1 | 2026-09-27 | Benefit corp removed from public page (moved to Article X fallback); Exhibit A referenced; amendment paths reconciled with OA X.3; help-form data paragraph added; Council nominating pool published; "binding" language removed pending legal review; acquisition bans added; 12-month conversion window. | Grok red-team (T-002) findings 1–8, 12, 13, 15. Founder decisions T-010. |
+| 1.2 | 2026-09-27 | Corrected Council name: "Phillip Whitley" (two Ls). | Founder correction. |
 
 ---
 
