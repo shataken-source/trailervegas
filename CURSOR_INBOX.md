@@ -1,13 +1,13 @@
 # Cursor Inbox — Command Queue
 
-**Last updated:** 2026-09-27
-**Next batch to execute:** Batch 10f
+**Last updated:** 2026-09-27 22:07 UTC
+**Next batch to execute:** none open
 
 ---
 
 ## Batch 10f — Log Two Build Flags
 
-**Status:** ⏳ Open (execute now)
+**Status:** ✅ Done (commit 98d0e4c)
 **Issued by:** Claude
 **Purpose:** Emergent raised two flags before building. Both accepted.
 Log the decisions so they don't get relitigated.

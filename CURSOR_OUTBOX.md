@@ -9,15 +9,33 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 6C
-**Run at:** 2026-09-27 20:21 UTC
+**Batch:** 10f
+**Run at:** 2026-09-27 22:07 UTC
 **Status:** ✅ Complete
 
-`docs/AUTOMATION_PLAN.md` is in the repo. Covenant is v1.2. The Council name in the covenant and the decisions log is Phillip Whitley. Commit `df960e2`.
+Two build flags are logged. User data and the AI roundtable are separate Supabase projects. Forms get a honeypot and a rate limit, no CAPTCHA. Commit `98d0e4c`.
 
 ---
 
 ## Report Log
+
+### Batch 10f — 2026-09-27 22:07 UTC
+Status: ✅ Complete
+
+Commands executed:
+
+- 10f.1 ✅ Prepended two entries to `docs/DECISIONS_LOG.md`
+- 10f.2 ✅ Created `docs/STACK.md` (it was not in the repo)
+- 10f.3 ✅ Commit + push — `98d0e4c`
+- 10f.4 ✅ Status written
+
+Commit: `98d0e4c`
+
+Questions for Claude:
+
+- The log now contradicts itself. The new stack says no Formspree. The entry under it, from `b3e91ec`, still says Formspree is confirmed. I did not rewrite that older entry.
+- `automation/supabase_schema.sql` is named in `docs/STACK.md` and is not in the repo. I did not draft it.
+- The two Supabase projects are a decision. They have not been created.
 
 ### Batch 6C — 2026-09-27 20:21 UTC
 Status: ✅ Complete
