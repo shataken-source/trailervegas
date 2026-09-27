@@ -11,7 +11,6 @@
 - **Assigned to:** ChatGPT
 - **Priority:** 🟡 Medium
 - **Status:** ⏳ Open
-- **Depends on:** Nothing
 - **Deadline:** 2026-09-29
 - **Description:** Generate 10 alternative taglines. Warm, irreverent,
   not corporate. No "adventure awaits" clichés.
@@ -23,11 +22,14 @@
 - **Assigned to:** Emergent
 - **Priority:** 🔴 Critical
 - **Status:** ⏸️ Blocked
-- **Depends on:** T-001 (seed list), founder hosting decision
+- **Depends on:** Founder hosting decision, seed list verification
 - **Deadline:** 2026-10-05
 - **Description:** Build the homepage per
   `docs/EMERGENT_BUILD_SPEC.md`. Start with homepage only. Deliver
   preview URL.
+- **Note:** Do not hardcode "binding commitment" in footer (M-011).
+  Use "public promise — legal review pending." Covenant v1.1 is now
+  the source.
 - **Output:** Live preview +
   `CONTRIBUTIONS/emergent/2026-09-27-homepage.md`
 
@@ -37,11 +39,13 @@
 - **Assigned to:** Founder (human lawyer)
 - **Priority:** 🔴 Critical
 - **Status:** ⏳ Open
-- **Depends on:** T-002 (done), T-008 (patch), T-010 (decisions)
+- **Depends on:** T-008 (done — v1.1 patched)
 - **Deadline:** 2026-10-15
-- **Description:** Human lawyer reviews `docs/TRUST_COVENANT.md` and
-  `docs/OPERATING_AGREEMENT_CLAUSE.md`. Hand them Grok's red-team with
-  the two drafts. Do not treat the current text as already tight.
+- **Description:** Human lawyer reviews `docs/TRUST_COVENANT.md` v1.1
+  and `docs/OPERATING_AGREEMENT_CLAUSE.md` v1.1. Hand them Grok's
+  red-team with the two drafts. Confirm Delaware as formation state,
+  co-op conversion path, the four Non-Negotiable Attributes, the
+  third-party enforcer mechanism, and the acquisition bans.
 - **Output:** Founder notes in `docs/DECISIONS_LOG.md`
 
 ---
@@ -50,7 +54,6 @@
 - **Assigned to:** Founder
 - **Priority:** 🟠 High
 - **Status:** ⏳ Open
-- **Depends on:** Nothing
 - **Deadline:** 2026-10-10
 - **Description:** Search USPTO for "TrailerVegas" or similar marks.
   Note conflicts in Class 35 and Class 43.
@@ -61,15 +64,12 @@
 ### T-008 — Reconcile Covenant with OA Article X
 - **Assigned to:** Claude
 - **Priority:** 🔴 Critical
-- **Status:** ⏳ Open
-- **Depends on:** T-002 (done), T-010 (founder decisions)
-- **Deadline:** 2026-10-02
+- **Status:** ✅ Done — 2026-09-27
 - **Description:** Align Covenant §3 with OA X.3. Lock Verified
-  Contribution in Article X. Patch in response to Grok findings 1–8,
-  12, 13, 15. Do not invent a new conversion model.
-- **Output:** Patch proposal file, then updated
-  `docs/TRUST_COVENANT.md` and
-  `docs/OPERATING_AGREEMENT_CLAUSE.md`
+  Contribution in Article X. Patch per Grok findings 1–8, 12, 13, 15.
+- **Output:** `docs/TRUST_COVENANT.md` v1.1,
+  `docs/OPERATING_AGREEMENT_CLAUSE.md` v1.1,
+  `docs/EXHIBIT_A_STUB.md`
 
 ---
 
@@ -77,35 +77,32 @@
 - **Assigned to:** ChatGPT
 - **Priority:** 🟡 Medium
 - **Status:** ⏳ Open
-- **Depends on:** T-002 (done)
 - **Deadline:** 2026-10-03
 - **Description:** Optional after T-004. Keep qualified lead fees as a
   future revenue line. Make it sound like a consented switchboard, not
   the lead farms the manifesto attacks.
 - **Output:** `CONTRIBUTIONS/chatgpt/2026-09-27-covenant-section6.md`
-  (Claude applies if founder accepts)
 
 ---
 
 ### T-010 — Founder Decisions That Unblock Covenant
 - **Assigned to:** Founder
 - **Priority:** 🔴 Critical
-- **Status:** ⏳ Open
-- **Depends on:** T-002 (done)
-- **Deadline:** 2026-10-05
-- **Description:** Answer the 4 decisions in
-  `docs/FOUNDER_DECISIONS_NEEDED.md`: entity state, first three
-  Council candidates, Exhibit A date, benefit-corp off-ramp. Edit the
-  file, commit, tell Cursor to check for commands.
-- **Output:** Updated `docs/FOUNDER_DECISIONS_NEEDED.md`
+- **Status:** ✅ Done — 2026-09-27
+- **Description:** Four decisions answered: Delaware; six Council
+  candidates nominated; Exhibit A by 2026-10-15; Option C (benefit
+  corp as internal fallback).
+- **Output:** `docs/FOUNDER_DECISIONS_NEEDED.md` (answered)
 
 ---
 
 ## Completed Tasks
 
-- **T-001** — Finish I-15 Seed List — ✅ 2026-09-27 — Claude
-- **T-002** — Trust Covenant Red-Team — ✅ 2026-09-27 — Grok
-- **T-003** — Corridor Research: I-15 vs I-10 — ✅ 2026-09-27 — Gemini
+- **T-001** — Finish I-15 Seed List — ✅ Claude — 2026-09-27
+- **T-002** — Trust Covenant Red-Team — ✅ Grok — 2026-09-27
+- **T-003** — Corridor Research — ✅ Gemini — 2026-09-27
+- **T-008** — Reconcile Covenant with OA — ✅ Claude — 2026-09-27
+- **T-010** — Founder Decisions — ✅ Founder — 2026-09-27
 
 ---
 
@@ -113,15 +110,15 @@
 
 *(Newest at top.)*
 
-- 2026-09-27 18:35 UTC — Gemini checked in, completed T-003, left 1
-  message (M-015) for Claude.
-- 2026-09-27 — Claude (Driver) responded to Grok's red-team. All 15
-  findings accepted. 8 new decisions logged. Batch 5 files queued in
-  CURSOR_INBOX.md. Waiting on founder decisions (T-010) to fire Batch 6.
-- 2026-09-27 18:15 UTC — Grok checked in, completed T-002, left 4
-  messages (M-008 to M-012) and 3 tasks (T-008, T-009, T-010).
-- 2026-09-27 — Claude checked in. Set up roundtable system. Completed
-  T-001 (seed list). Left 6 tasks for others.
+- 2026-09-27 — Claude (Driver) applied T-008 patch. Covenant v1.1,
+  OA v1.1, Exhibit A stub v0.1 published. T-010 marked done. Round 1
+  has two tasks remaining (T-004 ChatGPT, T-005 Emergent).
+- 2026-09-27 — Founder answered T-010 (Delaware, 6 Council candidates,
+  2026-10-15 Exhibit A, Option C).
+- 2026-09-27 — Gemini completed T-003. I-15 locked.
+- 2026-09-27 — Claude responded to Grok's red-team.
+- 2026-09-27 — Grok completed T-002.
+- 2026-09-27 — Claude set up roundtable, completed T-001.
 
 ---
 

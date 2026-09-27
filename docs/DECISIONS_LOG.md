@@ -5,181 +5,177 @@ Newest at top.
 
 ---
 
+## 2026-09-27 — Founder Decisions Answered (T-010)
+
+**Decision:** Four decisions made:
+
+1. **Entity state:** Delaware.
+2. **Advisory Council candidates (6):** Brian Walker, Mark Swords,
+   Philip Whitley, John Davis, Trina Gordon, April Davis. Public
+   14-day comment window, then confirm 3–5.
+3. **Exhibit A draft date:** 2026-10-15, aligned with legal review.
+4. **Benefit corp off-ramp:** Option C. Removed from public covenant.
+   Kept in Article X as legal fallback with non-negotiable attributes
+   attached.
+
+**Raised by:** Founder
+
+**Status:** Confirmed. Patches applied in T-008. See
+`docs/EXHIBIT_A_STUB.md` and updated `docs/TRUST_COVENANT.md` and
+`docs/OPERATING_AGREEMENT_CLAUSE.md`.
+
+---
+
+## 2026-09-27 — Automation: API-First, Not Browser RPA
+
+**Decision:** When we automate the AI roundtable, we use APIs, not
+browser automation. Supabase as message bus. GitHub for artifacts.
+Orchestrator in Python. Optional GUI dashboard. Emergent stays manual.
+
+**Reasoning:** Chat UIs prohibit automated access in their ToS.
+Protocol is stateless — repo is the memory. Prompt caching drops cost
+~80% because context is mostly static. One round per day at ~$0.15–0.20
+with caching. Under $10/month.
+
+**Raised by:** Founder (proposed GUI), Claude (clarified API-first).
+
+**Status:** Confirmed. See `docs/AUTOMATION_PLAN.md`. Build after
+Phase 0 ships.
+
+---
+
+## 2026-09-27 — Corridor: I-15 Locked
+
+**Decision:** Phase 0 corridor is I-15 (San Diego → Las Vegas → Salt
+Lake City → Montana). I-10 rejected.
+
+**Reasoning:** Gemini's research (T-003). I-15 has sustained year-round
+traffic, "rig-killer" topography (Cajon Pass, Baker Grade) that forces
+breakdown scenarios, lower-competition SEO targets, and aligns with
+the domain name.
+
+**Raised by:** Gemini (T-003)
+
+**Status:** Confirmed. See
+`CONTRIBUTIONS/gemini/2026-09-27-corridor-research.md`.
+
+---
+
 ## 2026-09-27 — Grok Red-Team Accepted (T-002)
 
-**Decision:** All 15 findings accepted. No pushback. Three Critical,
-seven High, five Medium/Low.
-
-**Reasoning:** Grok found real holes a skeptical RVer, a lawyer, or a
-future acquirer could drive through. The three Critical findings
-(benefit-corp off-ramp, missing Exhibit A, no standing until Advisory
-Council is seated) are foundational.
+**Decision:** All 15 findings accepted. No pushback.
 
 **Raised by:** Grok
 
-**Status:** Accepted. See
-`CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`.
+**Status:** Accepted. Patches applied in T-008.
 
 ---
 
-## 2026-09-27 — "Binding Commitment" Language Removed Pending T-006
+## 2026-09-27 — "Binding Commitment" Language Removed
 
 **Decision:** Footer line downgraded to "This is the public promise.
-Legal review pending."
+Legal review pending. See the draft operating agreement."
 
-**Reasoning:** Grok Finding 15. A GitHub page is not binding until the
-OA is filed in a chosen state with an Exhibit A and humans with
-standing.
+**Raised by:** Grok (Finding 15)
 
-**Raised by:** Grok
-
-**Status:** Confirmed. Emergent notified (M-011).
+**Status:** Confirmed. Applied in T-008.
 
 ---
 
-## 2026-09-27 — Advisory Council Seating Elevated to Critical
+## 2026-09-27 — Advisory Council Nominating Pool Named
 
-**Decision:** Three named Council members before launch is Critical, not
-Phase 2.
+**Decision:** Six candidates named for the initial Advisory Council
+pool. Public comment window, then 3–5 confirmed.
 
-**Reasoning:** Grok Finding 3. Specific-performance clause has no
-plaintiff without a Council. "Community-governed" is a slogan, not a
-structure.
+**Raised by:** Founder
 
-**Raised by:** Grok
-
-**Status:** Confirmed. Founder decision (T-010).
+**Status:** Confirmed.
 
 ---
 
 ## 2026-09-27 — Exhibit A Stub Elevated to Critical
 
-**Decision:** One-page Exhibit A stub must exist before covenant goes in
-footer.
+**Decision:** One-page Exhibit A stub published by 2026-10-15.
 
-**Reasoning:** Grok Finding 2. Conversion plan is the whole fight.
-Trusting a TBD is the incumbent move.
+**Raised by:** Grok (Finding 2)
 
-**Raised by:** Grok
-
-**Status:** Confirmed. Founder decision on date (T-010).
+**Status:** Confirmed. See `docs/EXHIBIT_A_STUB.md`.
 
 ---
 
-## 2026-09-27 — Help Form Consent Paragraph Added to Covenant
+## 2026-09-27 — Help Form Consent Paragraph Added
 
-**Decision:** Covenant §3 adds a paragraph explaining help form
-submissions are shared with matched providers. Same sentence in form,
-confirmation email, provider email.
+**Decision:** Covenant §3 adds explicit help-form data sharing
+paragraph.
 
-**Reasoning:** Grok Finding 12. The covenant says data is never shared
-unless the user asked. The help form is the product. This is the one
-place a real user could catch us being hypocrites.
+**Raised by:** Grok (Finding 12)
 
-**Raised by:** Grok
-
-**Status:** Confirmed. Patch in T-008.
+**Status:** Confirmed. Applied in T-008.
 
 ---
 
 ## 2026-09-27 — Covenant/OA Amendment Paths Reconciled
 
-**Decision:** Covenant §3 and OA X.3 disagree. Comment period is not a
-veto. Single stricter path.
+**Decision:** Single stricter path. Founder + 2/3 Council + 90-day
+public notice (pre-member). 2/3 members (post-member).
 
-**Reasoning:** Grok Finding 4. If the public covenant and legal OA
-disagree, the weaker document wins.
+**Raised by:** Grok (Finding 4)
 
-**Raised by:** Grok
-
-**Status:** Confirmed. T-008 assigned to Claude.
+**Status:** Confirmed. Applied in T-008.
 
 ---
 
-## 2026-09-27 — Verified Contribution Definition Locked in Article X
+## 2026-09-27 — Verified Contribution Locked in Article X
 
 **Decision:** Definition moves from "Company policies" into Article X.
-Changing it requires same supermajority as amending Article X.
+Changing it requires the same supermajority as amending Article X.
 
-**Reasoning:** Grok Finding 5. The company that wants to avoid a trigger
-should not control the definition of what fires it.
+**Raised by:** Grok (Finding 5)
 
-**Raised by:** Grok
-
-**Status:** Confirmed. Patch in T-008.
+**Status:** Confirmed. Applied in T-008.
 
 ---
 
 ## 2026-09-27 — 90-Day Conversion Deadline Extended
 
-**Decision:** 90 days to file conversion documents. 12 months to close.
-Specific performance attaches to filing, not closing.
+**Decision:** 90 days to file. 12 months to close. Specific
+performance attaches to filing, not closing.
 
-**Reasoning:** Grok Finding 7. Real LLC → co-op conversions involve
-securities, tax, new articles, membership agreements. 90 days to close
-is a built-in breach.
+**Raised by:** Grok (Finding 7)
 
-**Raised by:** Grok
-
-**Status:** Confirmed. Patch in T-008.
+**Status:** Confirmed. Applied in T-008.
 
 ---
 
 ## 2026-09-27 — Output Contract: Complete Files
 
-**Decision:** Every AI outputs complete files. Founder replaces.
-No GitHub integration needed.
+**Decision:** Every AI outputs complete files. Founder (via Cursor)
+replaces.
 
 **Raised by:** Founder
 
-**Status:** Confirmed. See `AI_PROTOCOL.md` and `AI_CHECKIN.md`.
+**Status:** Confirmed. See `AI_PROTOCOL.md`.
 
 ---
 
 ## 2026-09-27 — Legal Structure: LLC Now, Co-op Later
 
-**Decision:** Start as for-profit LLC. Commit publicly to converting to
-community-owned cooperative upon hitting triggers.
+**Decision:** Delaware LLC now. Convert to co-op on trigger.
 
-**Reasoning:** LLC is fast, cheap. Co-op is the right end state but
-would kill the project in infancy. The promise gives the trust story
-teeth.
-
-**Raised by:** Founder. Claude proposed the Trust Covenant. Grok
-identified escape hatches to close.
+**Raised by:** Founder
 
 **Status:** Confirmed pending legal review (T-006).
-
----
-
-## 2026-09-27 — Scope: One Corridor First
-
-**Decision:** Phase 0 is I-15. Not nationwide.
-
-**Raised by:** Claude
-
-**Status:** Confirmed. Final corridor choice pending Gemini (T-003).
 
 ---
 
 ## 2026-09-27 — Feature Scope: Reviews + Services Only in V1
 
 **Decision:** V1 is verified campground reviews + service provider
-directory. No Q&A. No "who's nearby." No marketplace.
+directory for one corridor.
 
 **Raised by:** Claude
 
-**Status:** Confirmed. See `docs/PRODUCT_SCOPE_V1.md`.
-
----
-
-## 2026-09-27 — Trust Covenant Published
-
-**Decision:** Public document, linked in footer, versioned.
-
-**Raised by:** Claude
-
-**Status:** Draft complete. Pending T-006 + T-008.
+**Status:** Confirmed.
 
 ---
 
@@ -187,7 +183,7 @@ directory. No Q&A. No "who's nearby." No marketplace.
 
 **Decision:** Domain `trailervegas.com`. Name "TrailerVegas."
 
-**Raised by:** Founder. Claude flagged USPTO search.
+**Raised by:** Founder
 
 **Status:** Confirmed. USPTO search pending (T-007).
 
@@ -196,8 +192,7 @@ directory. No Q&A. No "who's nearby." No marketplace.
 ## 2026-09-27 — Repo Setup
 
 **Decision:** Public repo at github.com/shataken-source/trailervegas.
-Local at C:\cevict-live\apps\trailervegas.
 
-**Raised by:** Founder + Cursor.
+**Raised by:** Founder + Cursor
 
 **Status:** Confirmed. Operational.

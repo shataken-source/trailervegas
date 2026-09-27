@@ -1,78 +1,69 @@
 # Cursor Inbox — Command Queue
 
 **How to use:** Cursor reads this file when the founder says "check
-trailervegas for your commands." Execute open batches in order. Update
-status. Commit and push after each batch.
+trailervegas for your commands." Execute open batches in order.
 
-**Last updated:** 2026-09-27 18:29 UTC
-**Next batch to execute:** Batch 6B (still blocked — see outbox)
+**Last updated:** 2026-09-27
+**Next batch to execute:** Batch 6B
 
 ---
 
 ## Batch 4 — Set Up Cursor Protocol
-
 **Status:** ✅ Done (commit ec9d5c3)
 
----
-
 ## Batch 5 — Claude's Red-Team Response
-
 **Status:** ✅ Done (commit 51d1202)
 
+## Batch 6A — Restore Grok's Output
+**Status:** ✅ Done (Grok red-team + M-008 saved)
+
+## Batch 7 — Gemini Corridor Research
+**Status:** ✅ Done (CONTRIBUTIONS/gemini/2026-09-27-corridor-research.md saved)
+
+## Batch 8 — Automation Plan
+**Status:** ✅ Done (docs/AUTOMATION_PLAN.md saved)
+
 ---
 
-## Batch 6A — Restore Grok's Output
+## Batch 6B — Covenant Patch + Exhibit A
 
-**Status:** ✅ Done (commit bf4d424)
+**Status:** ⏳ Open (execute now)
 **Issued by:** Claude
-**Purpose:** Grok's red-team file and message M-008 never made it into
-the repo. Founder pasted the output to Claude but not to Cursor. This
-batch restores the missing artifacts.
+**Purpose:** Apply Grok's red-team findings to the covenant and OA.
+Draft the Exhibit A stub. Log the four founder decisions. Close T-008
+and T-010.
 
 ### Commands
 
-**6A.1 — Save `CONTRIBUTIONS/grok/2026-09-27-trust-covenant-redteam.md`**
-- Action: Create (new file)
-- Content: See block below in this batch
+**6B.1 — Save `docs/DECISIONS_LOG.md`** (replace; see block)
 
-**6A.2 — Save `MESSAGES.md`**
-- Action: Replace
-- Content: See block below in this batch
-- Change: Add M-008 (Grok → Founder). Keep M-013 and M-014. Move M-008
-  through M-012 to appropriate sections.
+**6B.2 — Save `docs/FOUNDER_DECISIONS_NEEDED.md`** (replace — mark
+answered; see block)
 
-**6A.3 — Update `CURSOR_PROTOCOL.md`**
-- Action: Update — add one rule at the bottom of the Rules section
-- Line to add: `- When an AI's output arrives via the founder, save it
-  immediately. Do not route through another AI first.`
+**6B.3 — Save `docs/EXHIBIT_A_STUB.md`** (new; see block)
 
-**6A.4 — Commit + push**
-- Message: `[Batch 6A] Restore Grok red-team and M-008`
+**6B.4 — Save `docs/TRUST_COVENANT.md`** (replace — patched v1.1; see
+block)
 
-**6A.5 — Write status to `CURSOR_OUTBOX.md`**
+**6B.5 — Save `docs/OPERATING_AGREEMENT_CLAUSE.md`** (replace —
+patched v1.1; see block)
 
----
+**6B.6 — Save `TASKS.md`** (replace — mark T-008, T-010 done; see
+block)
 
-## Batch 6B — Covenant Patch (Queued)
+**6B.7 — Commit + push**
+- Message: `[Batch 6B] Covenant patch, Exhibit A stub, founder decisions logged`
 
-**Status:** ⏸️ Blocked — checked 2026-09-27 18:29 UTC, not run
-**Auto-triggers when:** Founder edits `docs/FOUNDER_DECISIONS_NEEDED.md`
-with the four answers, commits, and says "check trailervegas for your
-commands." Answers are in the file locally and are not committed.
-Planned commands still have no file blocks.
-
-**Planned commands (Claude will populate):**
-- Save `CONTRIBUTIONS/claude/2026-09-27-covenant-patch-proposal.md`
-- Save `docs/EXHIBIT_A_STUB.md`
-- Save updated `docs/TRUST_COVENANT.md`
-- Save updated `docs/OPERATING_AGREEMENT_CLAUSE.md`
-- Commit + push
+**6B.8 — Write status to `CURSOR_OUTBOX.md`**
 
 ---
 
 ## Command History
 
-- **Batch 4** — Set up Cursor protocol and handoff — ✅ ec9d5c3
-- **Batch 5** — Claude response to Grok red-team — ✅ 51d1202
-- **Batch 5b** — Cursor status report — ✅ 946c810
-- **Batch 6A** — Restore Grok red-team and M-008 — ✅ bf4d424
+- Batch 4 — Cursor protocol — ✅ ec9d5c3
+- Batch 5 — Claude red-team response — ✅ 51d1202
+- Batch 5b — Cursor status — ✅ 946c810
+- Batch 6A — Restore Grok output — ✅
+- Batch 7 — Gemini corridor — ✅
+- Batch 8 — Automation plan — ✅
+- Batch 6B — Covenant patch — ⏳ pending
