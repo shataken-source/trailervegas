@@ -7,18 +7,6 @@
 
 ## Active Tasks
 
-### T-003 — Corridor Research: I-15 vs I-10
-- **Assigned to:** Gemini
-- **Priority:** 🟠 High
-- **Status:** ⏳ Open
-- **Depends on:** Nothing
-- **Deadline:** 2026-09-29
-- **Description:** Research I-15 vs I-10 for RV traffic, service gaps,
-  SEO opportunity. Which should Phase 0 focus on? Cite sources.
-- **Output:** `CONTRIBUTIONS/gemini/2026-09-27-corridor-research.md`
-
----
-
 ### T-004 — Tagline Alternatives
 - **Assigned to:** ChatGPT
 - **Priority:** 🟡 Medium
@@ -117,6 +105,7 @@
 
 - **T-001** — Finish I-15 Seed List — ✅ 2026-09-27 — Claude
 - **T-002** — Trust Covenant Red-Team — ✅ 2026-09-27 — Grok
+- **T-003** — Corridor Research: I-15 vs I-10 — ✅ 2026-09-27 — Gemini
 
 ---
 
@@ -124,6 +113,8 @@
 
 *(Newest at top.)*
 
+- 2026-09-27 18:35 UTC — Gemini checked in, completed T-003, left 1
+  message (M-015) for Claude.
 - 2026-09-27 — Claude (Driver) responded to Grok's red-team. All 15
   findings accepted. 8 new decisions logged. Batch 5 files queued in
   CURSOR_INBOX.md. Waiting on founder decisions (T-010) to fire Batch 6.
