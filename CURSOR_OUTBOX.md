@@ -9,15 +9,64 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10g
-**Run at:** 2026-09-27 22:20 UTC
+**Batch:** 10L
+**Run at:** 2026-09-27 23:35 UTC
 **Status:** ✅ Complete
 
-Formspree is marked superseded. The schema and API route spec are in the repo. T-013 is done. The two Supabase projects are still not created. Commit `90c16f9`.
+Session end. App scaffold is already on main at `9cfe825`. Do not scaffold again. Next step is deploy.
 
 ---
 
 ## Report Log
+
+### Batch 10L — 2026-09-27 23:35 UTC
+Status: ✅ Complete
+
+Session End — 2026-09-27
+
+State: Batches 1–10k complete and pushed. The Next.js app was scaffolded after 10g and is on main.
+
+HEAD: `9cfe825` — Scaffold the Phase 0 Next.js site
+
+Next action when resuming:
+
+The scaffold is done. Do not scaffold it again. Deploy per README.md. Then test on phone. Then send the preview URL to Claude.
+
+Deploy sequence (from README.md):
+
+1. Create the Supabase `trailervegas-users` project. Run the Project 1 block of `automation/supabase_schema.sql` in that project only.
+2. Connect this GitHub repo in Vercel. Add `SUPABASE_USERS_URL`, `SUPABASE_USERS_ANON_KEY`, and `SUPABASE_USERS_SERVICE_ROLE_KEY`. There is no `.env.example` in the repo. Do not commit those keys.
+3. Deploy. Get the preview URL.
+4. Open on a phone. Submit test forms. Confirm `waitlist`, `help_requests`, `provider_applications`, and `consent_log` fill.
+5. DNS last, only after the phone test passes.
+
+Open founder tasks:
+
+- T-007 — USPTO search. Strings: TrailerVegas, Trailer Vegas, Vegas Trailer. Classes 35 + 43.
+- T-011 decision B — approve or revise ChatGPT's lead-fee copy. That copy file is not in the repo.
+
+Open Round 1 tasks:
+
+- T-005 — scaffold done (`9cfe825`). Awaiting deploy.
+- T-006 — legal review (lawyer + Grok red-team)
+- T-007 — USPTO search (founder)
+- T-011 — tagline logged. `docs/BRAND_VOICE.md` was never saved. Lead-fee copy pending.
+- T-015 — create Supabase projects (founder, during deploy)
+
+Round 1 status: Not closed. Closes when the preview URL is live and copy review passes.
+
+Session notes: Emergent correctly flagged that it cannot scaffold a Next.js app from chat. Cursor scaffolded it from the specs and pushed `9cfe825`. `content/` is still only `.gitkeep`. Page copy came from `docs/EMERGENT_BUILD_SPEC.md`, `docs/MANIFESTO.md`, `docs/TRUST_COVENANT.md`, and the decisions-log tagline. Privacy and terms are DRAFT topic lists, not a lawyer-written policy. `/contact` opens a GitHub issue. There is no covenant PDF and no founder email in the repo.
+
+Commands executed:
+
+- 10L.1 ✅ Session-end note written here. Next-action line corrected: scaffold already shipped.
+- 10L.2 ✅ Commit + push — this commit.
+
+Questions for Claude:
+
+- The pasted next action said to scaffold. That was already commit `9cfe825`. I did not start a second app.
+- The paste named `.env.example`. That file does not exist. Env var names are in the README Deploy section and `docs/STACK.md`.
+- `docs/BRAND_VOICE.md` and the ChatGPT lead-fee file are still absent.
 
 ### Batch 10g — 2026-09-27 22:20 UTC
 Status: ✅ Complete

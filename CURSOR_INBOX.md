@@ -1,35 +1,64 @@
 # Cursor Inbox — Command Queue
 
-**Last updated:** 2026-09-27 22:20 UTC
+**Last updated:** 2026-09-27
 **Next batch to execute:** none open
 
 ---
 
-## Batch 10g — Resolve Formspree Conflict + Deliver Supabase Schema
+## Batch 10L — Session End Note
 
-**Status:** ✅ Done (commit 90c16f9)
+**Status:** ✅ Done
 **Issued by:** Claude
-**Purpose:** Two fixes from Cursor's Batch 10f report:
-
-1. Formspree was confirmed in an earlier decision log entry, then
-   dropped by the stack decision. Both entries sit on top of each
-   other with no explicit supersession. Fix that.
-2. `automation/supabase_schema.sql` was named in `docs/STACK.md` but
-   is not in the repo. That's T-013. Save it now.
+**Purpose:** Log session end. Everything committed. Next action
+documented. Founder picking this up later.
 
 ### Commands
 
-**10g.1 — Save `docs/DECISIONS_LOG.md`** (replace — old Formspree
-entry gets a SUPERSEDED marker, new entry prepended; see block)
+**10L.1 — Update `CURSOR_OUTBOX.md`** with session-end note:
+Session End — 2026-09-27
+State: Batches 1–10k complete and pushed.
+HEAD: `9cfe825`
 
-**10g.2 — Save `automation/supabase_schema.sql`** (new — see block)
+Next action when resuming:
+The Next.js app is already scaffolded at `9cfe825`. Do not scaffold
+again. Deploy per README.md. Then test on phone. Then send the
+preview URL to Claude.
 
-**10g.3 — Save `docs/API_ROUTES.md`** (new — see block)
+Spec files for the scaffold (already used):
 
-**10g.4 — Save `TASKS.md`** (replace — mark T-013 done, add note that
-Supabase projects aren't created yet; see block)
+- docs/STACK.md — the stack
+- docs/EMERGENT_BUILD_SPEC.md — full build spec
+- docs/API_ROUTES.md — API route specs
+- automation/supabase_schema.sql — database schema
+- content/ — page copy folder (only `.gitkeep` is present)
+- docs/BRAND_VOICE.md — tagline and voice (file is not in the repo)
 
-**10g.5 — Commit + push**
-- Message: `[Batch 10g] Resolve Formspree conflict, deliver Supabase schema + API routes`
+Deploy sequence (from README.md):
 
-**10g.6 — Write status to `CURSOR_OUTBOX.md`**
+1. Create Supabase trailervegas-users project. Run Project 1 SQL.
+2. Connect the GitHub repo in Vercel. Add the Supabase env vars named in the README Deploy section. There is no `.env.example`.
+3. Deploy. Get preview URL.
+4. Open on phone. Submit test forms. Confirm all four tables fill.
+5. DNS last, only after phone test passes.
+
+Open founder tasks:
+
+- T-007 — USPTO search. Strings: TrailerVegas, Trailer Vegas, Vegas Trailer. Classes 35 + 43.
+- T-011 decision B — approve or revise ChatGPT's lead-fee copy.
+
+Open Round 1 tasks:
+
+- T-005 — scaffold done. Awaiting deploy.
+- T-006 — legal review (lawyer + Grok red-team)
+- T-007 — USPTO search (founder)
+- T-011 — tagline logged, lead-fee copy pending
+- T-015 — create Supabase projects (founder, during deploy)
+
+Round 1 status: Not closed. Closes when preview URL is live and
+copy review passes.
+
+Session notes: Emergent correctly flagged that it cannot scaffold
+a Next.js app from chat. Cursor scaffolded it and pushed `9cfe825`.
+
+**10L.2 — Commit + push**
+- Message: `[Batch 10L] Session end — state captured, next action documented`
