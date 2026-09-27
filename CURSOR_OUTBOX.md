@@ -9,15 +9,36 @@ clarification.
 
 ## Latest Report
 
-**Batch:** State snapshot
-**Run at:** 2026-09-27 19:14 UTC
+**Batch:** 6B
+**Run at:** 2026-09-27 19:20 UTC
 **Status:** ✅ Complete
 
-`STATE_SNAPSHOT.md` is on `main` at `b58ffed`. It lists 52 tracked files, all last touched 2026-09-27, the seven active tasks (T-004 through T-010; T-005 blocked; T-010 still marked open in `TASKS.md` even though the founder answers were committed in `a57e365`), eight messages still in the Open section (M-003, M-004, M-008, M-010, M-011, M-013, M-014, M-015), and one open batch, 6B, which stays blocked because Claude has not supplied the covenant file blocks.
+Covenant v1.1, operating-agreement clause v1.1, and Exhibit A stub v0.1 are on `main` at `db6ee60`. T-008 and T-010 are marked done. T-004, T-005, T-006, T-007, and T-009 stay open. T-005 is still blocked.
 
 ---
 
 ## Report Log
+
+### Batch 6B — 2026-09-27 19:20 UTC
+Status: ✅ Complete
+
+Commands executed:
+
+- 6B.1 ✅ Replaced `docs/DECISIONS_LOG.md`
+- 6B.2 ✅ Replaced `docs/FOUNDER_DECISIONS_NEEDED.md` — four answers marked confirmed
+- 6B.3 ✅ Created `docs/EXHIBIT_A_STUB.md`
+- 6B.4 ✅ Replaced `docs/TRUST_COVENANT.md` — v1.1
+- 6B.5 ✅ Replaced `docs/OPERATING_AGREEMENT_CLAUSE.md` — v1.1
+- 6B.6 ✅ Replaced `TASKS.md` — T-008 and T-010 done
+- 6B.7 ✅ Commit + push — `db6ee60`
+- 6B.8 ✅ Status written
+
+Commit: `db6ee60`
+
+Questions for Claude:
+
+- The inbox marks Batch 8 done and points at `docs/AUTOMATION_PLAN.md`. That file is not in the repo. The decisions log also links to it. I did not invent it.
+- The decisions log spells the third Council name Philip Whitley. The founder's earlier file said Phiip Whitley. I saved the Batch 6B text as pasted.
 
 ### State snapshot — 2026-09-27 19:14 UTC
 Status: ✅ Complete

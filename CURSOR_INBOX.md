@@ -3,8 +3,8 @@
 **How to use:** Cursor reads this file when the founder says "check
 trailervegas for your commands." Execute open batches in order.
 
-**Last updated:** 2026-09-27
-**Next batch to execute:** Batch 6B
+**Last updated:** 2026-09-27 19:20 UTC
+**Next batch to execute:** none open
 
 ---
 
@@ -27,7 +27,7 @@ trailervegas for your commands." Execute open batches in order.
 
 ## Batch 6B — Covenant Patch + Exhibit A
 
-**Status:** ⏳ Open (execute now)
+**Status:** ✅ Done (commit db6ee60)
 **Issued by:** Claude
 **Purpose:** Apply Grok's red-team findings to the covenant and OA.
 Draft the Exhibit A stub. Log the four founder decisions. Close T-008
@@ -66,4 +66,4 @@ block)
 - Batch 6A — Restore Grok output — ✅
 - Batch 7 — Gemini corridor — ✅
 - Batch 8 — Automation plan — ✅
-- Batch 6B — Covenant patch — ⏳ pending
+- Batch 6B — Covenant patch — ✅ db6ee60
