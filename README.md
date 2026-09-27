@@ -1,5 +1,7 @@
 # TrailerVegas
 
+**If you're new here, read HANDOFF.md first.**
+
 **A nationwide home base for RV families.**
 
 Find the place. Find the wrench. Find the honest answer.
@@ -9,14 +11,15 @@ Leave the next person a better map than you had.
 
 ## What This Is
 
-TrailerVegas is a community-driven platform for RVers — parks, boondocking,
-mobile repair, towing, storage, and honest reviews. Built because every
-incumbent platform either sold out, shut down, or started charging for
-things that used to be free.
+TrailerVegas is a community-driven platform for RVers — parks,
+boondocking, mobile repair, towing, storage, and honest reviews. Built
+because every incumbent platform either sold out, shut down, or started
+charging for things that used to be free.
 
 The full mission is in `docs/MANIFESTO.md`.
 The commitments are in `docs/TRUST_COVENANT.md`.
 The locked Phase 0 scope is in `docs/PRODUCT_SCOPE_V1.md`.
+Current state and next steps: `HANDOFF.md`.
 
 ---
 
@@ -34,16 +37,16 @@ The locked Phase 0 scope is in `docs/PRODUCT_SCOPE_V1.md`.
 
 ## How This Project Works
 
-This repo is the shared brain of a multi-AI collaboration. The founder is
-the router. Claude is the project driver. ChatGPT, Gemini, Grok, and
-Emergent contribute as ideator, researcher, contrarian, and builder.
+This repo is the shared brain of a multi-AI collaboration. The founder
+is the router. Claude is the project driver. ChatGPT, Gemini, Grok,
+Emergent, and Cursor contribute as ideator, researcher, contrarian,
+builder, and local executor.
 
-**Every AI session starts at `AI_CHECKIN.md`.**
-**Every AI session ends with complete output files.**
+**AI sessions start at `AI_CHECKIN.md`.**
+**Cursor sessions start at `CURSOR_INBOX.md`.**
 **Every change is logged in `CHANGELOG.md` and `docs/DECISIONS_LOG.md`.**
 
-No decision lives only in a chat. If it's not in a `.md` file, it doesn't
-exist.
+If it's not in a `.md` file, it doesn't exist.
 
 ---
 
@@ -51,14 +54,16 @@ exist.
 
 | Document | Purpose |
 |---|---|
+| [HANDOFF.md](HANDOFF.md) | Current state and next steps |
 | [Manifesto](docs/MANIFESTO.md) | Why we exist |
 | [Trust Covenant](docs/TRUST_COVENANT.md) | Our public commitments |
-| [Operating Agreement Clause](docs/OPERATING_AGREEMENT_CLAUSE.md) | Legal teeth for the co-op conversion |
+| [Operating Agreement Clause](docs/OPERATING_AGREEMENT_CLAUSE.md) | Legal teeth for co-op conversion |
 | [Product Scope V1](docs/PRODUCT_SCOPE_V1.md) | What we're building first |
 | [Monetization](docs/MONETIZATION.md) | How we make money |
 | [Competitive Research](docs/COMPETITIVE_RESEARCH.md) | Who we're up against |
 | [AI Collaboration](docs/AI_COLLABORATION.md) | How multiple AIs contribute |
-| [AI Protocol](AI_PROTOCOL.md) | Rules of engagement |
+| [AI Protocol](AI_PROTOCOL.md) | Rules of engagement for AIs |
+| [Cursor Protocol](CURSOR_PROTOCOL.md) | Rules of engagement for Cursor |
 | [Tasks](TASKS.md) | What's assigned to whom |
 | [Messages](MESSAGES.md) | Message board between AIs |
 | [Decisions Log](docs/DECISIONS_LOG.md) | Every decision, dated |
@@ -67,14 +72,15 @@ exist.
 
 ---
 
-## Contributing (AIs)
+## Contributing
 
-Read `AI_CHECKIN.md`. Follow the protocol. Output complete files.
+**AIs:** Read `AI_CHECKIN.md`. Follow the protocol. Output complete
+files.
 
-## Contributing (Humans)
+**Cursor:** Read `CURSOR_INBOX.md`. Execute commands. Report status.
 
-This is a solo founder project in Phase 0. If you're an RVer with feedback,
-open an issue or email [founder email].
+**Humans:** This is a solo founder project in Phase 0. If you're an
+RVer with feedback, open an issue or email.
 
 ---
 
