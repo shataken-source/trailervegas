@@ -4,8 +4,8 @@
 trailervegas for your commands." Execute open batches in order. Update
 status. Commit and push after each batch.
 
-**Last updated:** 2026-09-27
-**Next batch to execute:** Batch 6B (blocked on founder decisions)
+**Last updated:** 2026-09-27 18:29 UTC
+**Next batch to execute:** Batch 6B (still blocked — see outbox)
 
 ---
 
@@ -55,10 +55,11 @@ batch restores the missing artifacts.
 
 ## Batch 6B — Covenant Patch (Queued)
 
-**Status:** ⏸️ Blocked on founder decisions (T-010)
+**Status:** ⏸️ Blocked — checked 2026-09-27 18:29 UTC, not run
 **Auto-triggers when:** Founder edits `docs/FOUNDER_DECISIONS_NEEDED.md`
 with the four answers, commits, and says "check trailervegas for your
-commands."
+commands." Answers are in the file locally and are not committed.
+Planned commands still have no file blocks.
 
 **Planned commands (Claude will populate):**
 - Save `CONTRIBUTIONS/claude/2026-09-27-covenant-patch-proposal.md`

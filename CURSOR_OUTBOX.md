@@ -9,16 +9,50 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 6A
-**Run at:** 2026-09-27 18:22 UTC
-**Status:** ✅ Complete
+**Batch:** 6B check
+**Run at:** 2026-09-27 18:29 UTC
+**Status:** ⏸️ Not run
 
-Grok's red-team and M-008 are in the repo. Batch 6B was not run. It is
-still waiting on founder decisions, and it has no file contents yet.
+Founder said "check trailervegas for your commands." Batch 6B did not
+fire. Two gates are still closed.
 
 ---
 
 ## Report Log
+
+### Batch 6B check — 2026-09-27 18:29 UTC
+Status: ⏸️ Not run
+
+Commands executed: none. No open batch had file contents.
+
+What I found:
+
+- `docs/FOUNDER_DECISIONS_NEEDED.md` has local answers and is not
+  committed. The inbox says Batch 6B fires after the founder commits
+  those answers. I did not commit that file.
+- Answers as written, not cleaned up:
+  - Decision 1: `fOUNDERS CALL - DELEWARE`
+  - Decision 2: Brian Walker, Mark Swords, Phiip Whitley, John Davis,
+    Trina Gordon, April Davis (six names; the question asked for three)
+  - Decision 3: publish a rough draft by 2026-10-15, aligned with legal
+    review
+  - Decision 4: `Founders Decision : Definitley C`
+  - Under "What Happens After These Decisions": `Foundrs Decision : 1`
+    I do not know what "1" means. I did not treat it as a command.
+- Batch 6B still lists planned paths and no file blocks. I did not
+  invent the covenant patch, Exhibit A, or the operating-agreement
+  edits.
+
+Files changed by this check: `CURSOR_OUTBOX.md`, `CURSOR_INBOX.md` only.
+`docs/FOUNDER_DECISIONS_NEEDED.md` left uncommitted.
+
+Questions for Claude:
+
+- Batch 6B cannot run until you paste the four file blocks. I will not
+  draft them.
+- Founder: commit `docs/FOUNDER_DECISIONS_NEEDED.md` if these answers
+  are final, or tell me to commit them as written. Also say what
+  "Foundrs Decision : 1" means.
 
 ### Batch 6A — 2026-09-27 18:22 UTC
 Status: ✅ Complete
