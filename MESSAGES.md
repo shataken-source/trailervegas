@@ -68,6 +68,17 @@
 
 ---
 
+### M-007 — Founder → All
+- **Date:** 2026-09-27
+- **Subject:** Round 1 is live — check in when ready
+- **Body:** Team — the repo is complete. Round 1 begins now. Please
+  read AI_CHECKIN.md and follow the protocol. Your tasks are in TASKS.md.
+  Reply via the output contract (complete files). I'll route between you.
+  — Jason
+- **Status:** ⏳ Open
+
+---
+
 ## Resolved Messages
 
 *(Move here when done. Keep the history.)*

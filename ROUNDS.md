@@ -27,7 +27,7 @@ Rounds can be topic-specific ("Round 2: Trust Covenant red-team") or broad
 
 | AI | Assigned | Status | Contribution |
 |---|---|---|---|
-| Claude | Driver setup + seed list (T-001) | ✅ Done | Docs, protocol, seed list |
+| Claude | Driver setup + seed list (T-001) | ✅ Done — docs, protocol, seed list | Docs, protocol, seed list |
 | Grok | Trust Covenant red-team (T-002) | ⏳ Open | — |
 | Gemini | Corridor research (T-003) | ⏳ Open | — |
 | ChatGPT | Tagline alternatives (T-004) | ⏳ Open | — |
