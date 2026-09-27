@@ -1,1 +1,89 @@
-# ai-roundtable.yml — placeholder, awaiting content.
+name: AI Roundtable
+
+on:
+  workflow_dispatch:
+    inputs:
+      ai:
+        description: 'Which AI to call'
+        required: true
+        type: choice
+        options:
+          - claude
+          - chatgpt
+          - grok
+          - gemini
+          - all
+      topic:
+        description: 'Topic or task (optional — defaults to ROUNDS.md)'
+        required: false
+        type: string
+  # Uncomment to run on a schedule (daily at 9am UTC)
+  # schedule:
+  #   - cron: '0 9 * * *'
+
+jobs:
+  call-ai:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install requests pyyaml
+
+      - name: Read round config
+        id: config
+        run: |
+          python automation/scripts/read_round.py
+
+      - name: Call Claude
+        if: inputs.ai == 'claude' || inputs.ai == 'all'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          python automation/scripts/call_claude.py
+
+      - name: Call ChatGPT
+        if: inputs.ai == 'chatgpt' || inputs.ai == 'all'
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          python automation/scripts/call_chatgpt.py
+
+      - name: Call Grok
+        if: inputs.ai == 'grok' || inputs.ai == 'all'
+        env:
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: |
+          python automation/scripts/call_grok.py
+
+      - name: Call Gemini
+        if: inputs.ai == 'gemini' || inputs.ai == 'all'
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: |
+          python automation/scripts/call_gemini.py
+
+      - name: Commit changes
+        run: |
+          git config user.name "TrailerVegas Bot"
+          git config user.email "bot@trailervegas.com"
+          git add -A
+          git diff --quiet && git diff --staged --quiet || git commit -m "AI Roundtable: $(date -u +%Y-%m-%d)"
+          git push
+
+      - name: Notify founder
+        if: always()
+        run: |
+          echo "Round complete. Check BRAINSTORM.md for updates."
