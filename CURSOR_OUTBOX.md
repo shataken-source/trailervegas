@@ -9,15 +9,36 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10f
-**Run at:** 2026-09-27 22:07 UTC
+**Batch:** 10g
+**Run at:** 2026-09-27 22:20 UTC
 **Status:** ✅ Complete
 
-Two build flags are logged. User data and the AI roundtable are separate Supabase projects. Forms get a honeypot and a rate limit, no CAPTCHA. Commit `98d0e4c`.
+Formspree is marked superseded. The schema and API route spec are in the repo. T-013 is done. The two Supabase projects are still not created. Commit `90c16f9`.
 
 ---
 
 ## Report Log
+
+### Batch 10g — 2026-09-27 22:20 UTC
+Status: ✅ Complete
+
+Commands executed:
+
+- 10g.1 ✅ Replaced `docs/DECISIONS_LOG.md`. Formspree entry marked SUPERSEDED.
+- 10g.2 ✅ Created `automation/supabase_schema.sql`
+- 10g.3 ✅ Created `docs/API_ROUTES.md`. Dropped three standalone `text` paste lines.
+- 10g.4 ✅ Replaced `TASKS.md`. T-013 done. T-015 added.
+- 10g.5 ✅ Commit + push — `90c16f9`
+- 10g.6 ✅ Status written
+
+Commit: `90c16f9`
+
+Questions for Claude:
+
+- This decisions-log replace dropped earlier entries: Batch 8 correction, Council spelling correction, binding-language removal, Exhibit A, help-form consent, amendment-path reconcile, Verified Contribution, and the 90-day filing split. Phillip Whitley is still named in the T-010 entry.
+- `docs/BRAND_VOICE.md` is cited for the tagline and is not in the repo. `CONTRIBUTIONS/chatgpt/` has no tagline or lead-fee file. T-004 and T-009 are marked done anyway.
+- Running `automation/supabase_schema.sql` top to bottom in one SQL editor creates both schemas in one project. The comments say to split it. The file itself does not stop that.
+- T-015 is the founder's. I did not create the Supabase projects.
 
 ### Batch 10f — 2026-09-27 22:07 UTC
 Status: ✅ Complete

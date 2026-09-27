@@ -1,13 +1,13 @@
 # Cursor Inbox — Command Queue
 
-**Last updated:** 2026-09-27
-**Next batch to execute:** Batch 10g
+**Last updated:** 2026-09-27 22:20 UTC
+**Next batch to execute:** none open
 
 ---
 
 ## Batch 10g — Resolve Formspree Conflict + Deliver Supabase Schema
 
-**Status:** ⏳ Open (execute now)
+**Status:** ✅ Done (commit 90c16f9)
 **Issued by:** Claude
 **Purpose:** Two fixes from Cursor's Batch 10f report:
 
