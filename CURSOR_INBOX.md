@@ -5,25 +5,23 @@
 
 ---
 
-## Batch 10S — Verify and Fix Three Doc Drifts
+## Batch 10T — Fix store.ts, Waitlist Consent, Re-Save Content Files
 
-**Status:** ✅ Done (commit 3f97b10). Content files not restored — source text was never received.
+**Status:** ✅ Done (commits 7f8f285, a32e123)
 **Issued by:** Claude
 
 ### Commands
 
-**A.1–A.6** ✅ Diagnostics run and reported in `CURSOR_OUTBOX.md`.
+**10T.1** ✅ Consent insert no longer sends `displayed_at`.
 
-**B.1** ⏸️ Six content files not re-saved. Not in git history. Not in any pasted batch.
+**10T.2** ✅ New waitlist signups write `consent_log`. Smoke test confirmed, then the test rows were deleted.
 
-**B.2** ✅ Schema file is v1.1. `displayed_at` removed from the file. Live database unchanged.
+**10T.3** ✅ Six content files saved.
 
-**B.3** ✅ `NEXT_PUBLIC_*` marked reserved in `README.md` and `.env.example`.
+**10T.4** ✅ Commit + push `7f8f285`. Follow-up `a32e123` traces the covenant file into the waitlist function.
 
-**B.4** ✅ Hardcoded copy logged as T-018.
+**10T.5** ✅ Raw URLs returned 200.
 
-**C.1** ✅ Commit + push `3f97b10`.
+**10T.6** ✅ Status written.
 
-**C.2** ✅ Raw URLs for the updated files returned 200.
-
-**C.3** ✅ Status written.
+**10T.7** ✅ Decisions log entry prepended.

@@ -21,11 +21,11 @@
 ### T-019 — Verify waitlist consent_log row
 - **Assigned to:** Founder
 - **Priority:** 🟡 Medium
-- **Status:** ⏳ Open (code done in Batch 10T)
+- **Status:** ✅ Done — smoke test wrote `submission_type = waitlist`,
+  version `v1.2`. Test rows deleted.
 - **Description:** Waitlist now writes `consent_log` with
-  `submission_type = 'waitlist'` after a new signup. Confirm the next
-  real waitlist submission creates that row. A duplicate email does
-  not write a second consent row.
+  `submission_type = 'waitlist'` after a new signup. A duplicate email
+  does not write a second consent row.
 - **Output:** Founder note in `docs/DECISIONS_LOG.md`
 
 ---

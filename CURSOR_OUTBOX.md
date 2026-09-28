@@ -9,15 +9,41 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10S
-**Run at:** 2026-09-28 02:20 UTC
-**Status:** ✅ Complete, with one item not fixed
+**Batch:** 10T
+**Run at:** 2026-09-28 02:30 UTC
+**Status:** ✅ Complete
 
-Diagnostics were run before any edit. Commit `3f97b10`. Raw URLs for the five updated files returned 200. The schema file on GitHub is Version 1.1 and its `consent_log` table has no `displayed_at` column.
+`displayed_at` is gone from the consent insert and from the live `consent_log` table. A new waitlist signup writes `consent_log`. The six content files are on main. Raw URLs returned 200.
+
+Commits: `7f8f285` (the batch) and `a32e123` (waitlist function could not read the covenant file until the trace include). Production deploy `dpl_24Mk61HTgJtRE37sXPKi9k5AbRum` is READY.
 
 ---
 
 ## Report Log
+
+### Batch 10T — 2026-09-28 02:30 UTC
+Status: ✅ Complete
+
+Commands:
+
+- 10T.1 ✅ `lib/store.ts` no longer sends `displayed_at`. Help and provide routes no longer pass it. Their own table inserts were unchanged.
+- 10T.2 ✅ Waitlist calls `logConsent` after a new insert. `submission_type = waitlist`. Version and covenant URL come from the same helper as help and provide. `submitted_at` is the database default. A duplicate email returns ok and does not write a second consent row.
+- 10T.3 ✅ Six files saved under `content/`.
+- 10T.4 ✅ Commit + push `7f8f285`.
+- 10T.5 ✅ Raw URL 200 for all six content files and `lib/store.ts`. The store file does not contain `displayed_at`.
+- 10T.6 ✅ This status.
+- 10T.7 ✅ Decisions-log entry prepended.
+
+Live database: `consent_log.displayed_at` was `NOT NULL` with no default. The new insert would have failed, and the old deploy would have failed if the column disappeared first. It was made nullable across the deploy, then dropped after `a32e123` was READY. Live columns now: id, submission_type, submission_id, consent_version, covenant_url, submitted_at, ip, user_agent.
+
+Smoke test: the first production build returned 500 because the waitlist function could not open `docs/TRUST_COVENANT.md` (`ENOENT`). `a32e123` adds that file to the waitlist, help, and provide traces. A later signup wrote `consent_log` as `waitlist` / `v1.2`. The three test rows were deleted.
+
+Still open, not part of this batch:
+
+- T-018: the app still hardcodes copy in `lib/copy.ts`. The new markdown files are the reference. Live pages were not rewritten.
+- `docs/API_ROUTES.md` still says waitlist consent is not applicable, and it still lists `displayed_at`. `docs/STACK.md` still lists the column. The forms still send `displayed_at` in JSON. The server ignores it.
+
+Commits: `7f8f285`, `a32e123`
 
 ### Batch 10S — 2026-09-28 02:20 UTC
 Status: ✅ Complete, with one item not fixed
