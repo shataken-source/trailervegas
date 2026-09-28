@@ -5,19 +5,27 @@
 
 ---
 
-## Batch 10Q — Fix Homepage Copy, Pull Council Names
+## Batch 10R — Close Round 1
 
-**Status:** ✅ Done (commit ae63c7e)
+**Status:** ✅ Done (commit 2d7d773)
 **Issued by:** Claude
 
 ### Commands
 
-**10Q.1** ✅ Homepage problem columns and cards updated in `lib/copy.ts`.
+**10R.1** ✅ `ROUNDS.md` saved. Round 1 closed.
 
-**10Q.2** ✅ Council names pulled from the covenant and founder-decisions file.
+**10R.2** ✅ `TASKS.md` saved. T-005 done.
 
-**10Q.3** ✅ Commit + push `ae63c7e`.
+**10R.3** ✅ `docs/DECISIONS_LOG.md` saved.
 
-**10Q.4** ✅ Both raw docs returned 200. Names are not in those files.
+**10R.4** ✅ `README.md` saved.
 
-**10Q.5** ✅ Status written.
+**10R.5** ✅ `.env.example` saved.
+
+**10R.6** ✅ `CHANGELOG.md` saved.
+
+**10R.7** ✅ Commit + push `2d7d773`.
+
+**10R.8** ✅ Raw URLs returned 200 for ROUNDS.md, TASKS.md, README.md.
+
+**10R.9** ✅ Status written.

@@ -9,15 +9,40 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10Q
-**Run at:** 2026-09-28 01:50 UTC
+**Batch:** 10R
+**Run at:** 2026-09-28 02:05 UTC
 **Status:** ✅ Complete
 
-Homepage problem columns and cards use the middle-length copy. Council names are off the current public files. Both raw docs returned 200. Commit `ae63c7e`.
+Round 1 is closed. Six files saved, committed, and pushed as `2d7d773`. Raw URLs for ROUNDS.md, TASKS.md, and README.md each returned 200.
 
 ---
 
 ## Report Log
+
+### Batch 10R — 2026-09-28 02:05 UTC
+Status: ✅ Complete
+
+Commands:
+
+- 10R.1 ✅ `ROUNDS.md` replaced. Round 1 closed. Round 2 not opened.
+- 10R.2 ✅ `TASKS.md` replaced. T-005 marked done.
+- 10R.3 ✅ `docs/DECISIONS_LOG.md` replaced with the pasted file (four new entries on top, older entries shortened).
+- 10R.4 ✅ `README.md` replaced. Env names are `SUPABASE_USERS_*`.
+- 10R.5 ✅ `.env.example` saved. Placeholders only. No secrets.
+- 10R.6 ✅ `CHANGELOG.md` prepended with the Round 1 close entry.
+- 10R.7 ✅ Commit + push — `2d7d773`. Message: `[Batch 10R] Close Round 1 — T-005 done, live site verified`. Only those six files were staged.
+- 10R.8 ✅ Raw URL 200: `ROUNDS.md`, `TASKS.md`, `README.md`.
+- 10R.9 ✅ This status.
+
+Commit: `2d7d773`
+
+Notes (not fixed — the batch said save the pasted files):
+
+- `CHANGELOG.md` says `content/` has six copy files. That folder is empty in the current tree.
+- `CHANGELOG.md` says `automation/supabase_schema.sql` is schema v1.1. The file header says Version 1.0.
+- README and `.env.example` list `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_COVENANT_VERSION`, and `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`. The app does not read those three. Plausible domain is still hardcoded. Live forms use `SUPABASE_USERS_*`, which are set on Vercel.
+- The decisions-log replace dropped detail that only remains in older commits. Current tree matches the paste.
+- Round 2 was not opened.
 
 ### Batch 10Q — 2026-09-28 01:50 UTC
 Status: ✅ Complete
