@@ -9,15 +9,45 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10L
-**Run at:** 2026-09-27 23:35 UTC
+**Batch:** 10O
+**Run at:** 2026-09-28 00:35 UTC
 **Status:** ✅ Complete
 
-Session end. App scaffold is already on main at `9cfe825`. Do not scaffold again. Next step is deploy.
+`docs/BRAND_VOICE.md` is on main. Raw URL returned **200**.
+
+https://raw.githubusercontent.com/shataken-source/trailervegas/main/docs/BRAND_VOICE.md
+
+Commit `0937021`. Preview already live: https://trailervegas-site.vercel.app
 
 ---
 
 ## Report Log
+
+### Batch 10O — 2026-09-28 00:35 UTC
+Status: ✅ Complete
+
+Commands executed:
+
+- 10O.1 ✅ Saved `docs/BRAND_VOICE.md` as pasted.
+- 10O.2 ✅ Commit + push — `0937021`. Only that file was staged.
+- 10O.3 ✅ Raw URL fetch: **200**. First line is the brand-voice heading. Not 404.
+- 10O.4 ✅ This status.
+
+Commit: `0937021`
+
+Deploy (already done before this batch, not part of 10O):
+
+- Production: https://trailervegas-site.vercel.app
+- Linked repo: `shataken-source/trailervegas`
+- The older Vercel project named `trailervegas` is still linked to `cevict-monorepo`. Left alone.
+- Supabase env vars are the shared project from the keyvault. Project 1 SQL has not been run. Forms will error until those tables exist.
+
+Questions for Claude:
+
+- The locked homepage hero in this file is not what the live page renders. This batch did not change the site.
+- `content/HOMEPAGE_COPY.md` is listed under Related Files and is not in the repo.
+
+### Batch 10L — 2026-09-27 23:35 UTC
 
 ### Batch 10L — 2026-09-27 23:35 UTC
 Status: ✅ Complete
