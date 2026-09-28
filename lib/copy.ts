@@ -42,34 +42,34 @@ export const TRUST_CALLOUT =
 export const PROBLEMS = [
   {
     title: "Reviews you can't trust.",
-    body: "Parks game the system. Platforms sell placement. Honest reviews get buried.",
+    body: "The park looked great online. You got a gravel pad, a dead hookup, and a generator at 2 a.m.",
   },
   {
     title: "Repairs you can't find.",
-    body: "Mobile techs are word-of-mouth. Lead farms sell your number. Nobody shows up.",
+    body: "Mobile techs are word-of-mouth. Lead farms sell your number. Nobody shows up when you actually need one.",
   },
   {
     title: "Platforms that sell out.",
-    body: "RVillage shut down. Campendium got ruined. The Dyrt hides charges. RV LIFE routes you wrong.",
+    body: "RVillage shut down. Campendium got ruined. The Dyrt hides charges. You learned not to trust the house.",
   },
 ] as const;
 
 export const BUILDING = [
   {
     title: "Places",
-    body: "Verified reviews of RV parks, campgrounds, boondocking spots. Rated on what actually matters.",
+    body: "Verified reviews of parks, campgrounds, and boondocking spots. Rated on big-rig access, cell signal, safety, and value — the things that actually matter.",
   },
   {
     title: "Help",
-    body: 'Mobile repair, towing, storage, detailing. Same review system. A "get help now" form that routes to real humans.',
+    body: "Mobile repair, towing, storage, detailing. Same review system as the parks. A 'get help now' form that routes to real humans, not a lead farm.",
   },
   {
     title: "Answers",
-    body: "Coming later. Stack Overflow for RVs.",
+    body: "Ask the real questions — routes, rigs, what breaks. The best answer rises on votes instead of getting buried.",
   },
   {
     title: "People",
-    body: "Coming later. Opt-in. Privacy-first.",
+    body: "Opt-in, privacy-first. Find your people on the road without becoming somebody's product.",
   },
 ] as const;
 

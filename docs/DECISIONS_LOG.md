@@ -186,8 +186,7 @@ slot. Geography never goes in the tagline. Only in the descriptor.
 **Decision:** Four decisions made:
 
 1. Entity state: Delaware.
-2. Advisory Council candidates (6): Brian Walker, Mark Swords,
-   Phillip Whitley, John Davis, Trina Gordon, April Davis.
+2. Advisory Council candidates (6): names withheld pending consent.
 3. Exhibit A draft date: 2026-10-15.
 4. Benefit corp off-ramp: Option C.
 

@@ -23,14 +23,8 @@ founder could make. All answered. Patches applied in T-008.
 
 **Question:** Who are the first three Council members?
 
-**Your call:** Six candidates nominated:
-
-1. Brian Walker
-2. Mark Swords
-3. Philip Whitley
-4. John Davis
-5. Trina Gordon
-6. April Davis
+**Your call:** Six candidates nominated (names withheld pending consent). Seating
+to be completed before Phase 0 launch.
 
 **Process:** Public 14-day comment window, then confirm 3–5 from the
 pool. Terms: 12 months, max 2 consecutive.

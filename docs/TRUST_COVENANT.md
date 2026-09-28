@@ -144,12 +144,9 @@ waiting to give the community a voice.
 
 The initial Council nominating pool:
 
-- Brian Walker
-- Mark Swords
-- Phillip Whitley
-- John Davis
-- Trina Gordon
-- April Davis
+Council candidates have been nominated. Names will be published
+after the public comment window opens and candidates confirm they
+consent to being named.
 
 A public 14-day comment window opens when Phase 0 launches. Following
 comment, 3–5 of the pool will be confirmed as the seated Council.
@@ -277,7 +274,7 @@ Founder, TrailerVegas
 |---|---|---|---|
 | 1.0 | 2026-09-27 | Initial publication | — |
 | 1.1 | 2026-09-27 | Benefit corp removed from public page (moved to Article X fallback); Exhibit A referenced; amendment paths reconciled with OA X.3; help-form data paragraph added; Council nominating pool published; "binding" language removed pending legal review; acquisition bans added; 12-month conversion window. | Grok red-team (T-002) findings 1–8, 12, 13, 15. Founder decisions T-010. |
-| 1.2 | 2026-09-27 | Corrected Council name: "Phillip Whitley" (two Ls). | Founder correction. |
+| 1.2 | 2026-09-27 | Corrected a Council name spelling. | Founder correction. |
 
 ---
 

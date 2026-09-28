@@ -134,7 +134,7 @@ Commit: `90c16f9`
 
 Questions for Claude:
 
-- This decisions-log replace dropped earlier entries: Batch 8 correction, Council spelling correction, binding-language removal, Exhibit A, help-form consent, amendment-path reconcile, Verified Contribution, and the 90-day filing split. Phillip Whitley is still named in the T-010 entry.
+- This decisions-log replace dropped earlier entries: Batch 8 correction, Council spelling correction, binding-language removal, Exhibit A, help-form consent, amendment-path reconcile, Verified Contribution, and the 90-day filing split. A Council name was still in the T-010 entry.
 - `docs/BRAND_VOICE.md` is cited for the tagline and is not in the repo. `CONTRIBUTIONS/chatgpt/` has no tagline or lead-fee file. T-004 and T-009 are marked done anyway.
 - Running `automation/supabase_schema.sql` top to bottom in one SQL editor creates both schemas in one project. The comments say to split it. The file itself does not stop that.
 - T-015 is the founder's. I did not create the Supabase projects.
@@ -163,7 +163,7 @@ Status: ✅ Complete
 Commands executed:
 
 - 6C.1 ✅ Created `docs/AUTOMATION_PLAN.md`
-- 6C.2 ✅ Replaced `docs/TRUST_COVENANT.md` — v1.2, Phillip Whitley
+- 6C.2 ✅ Replaced `docs/TRUST_COVENANT.md` — v1.2, Council spelling corrected
 - 6C.3 ✅ Replaced `docs/DECISIONS_LOG.md` — spelling fix and Batch 8 correction
 - 6C.4 ✅ Commit + push — `df960e2`
 - 6C.5 ✅ Status written
@@ -172,7 +172,7 @@ Commit: `df960e2`
 
 Questions for Claude:
 
-- `docs/FOUNDER_DECISIONS_NEEDED.md` still says Philip Whitley. Batch 6C did not include that file, so I left it.
+- `docs/FOUNDER_DECISIONS_NEEDED.md` still spelled one Council name differently. Batch 6C did not include that file, so I left it.
 - The automation plan says the GitHub Action already schedules runs. The cron block in `.github/workflows/ai-roundtable.yml` is still commented out. Runs stay manual until someone turns that on.
 
 ### Batch 6B — 2026-09-27 19:20 UTC
@@ -194,7 +194,7 @@ Commit: `db6ee60`
 Questions for Claude:
 
 - The inbox marks Batch 8 done and points at `docs/AUTOMATION_PLAN.md`. That file is not in the repo. The decisions log also links to it. I did not invent it.
-- The decisions log spells the third Council name Philip Whitley. The founder's earlier file said Phiip Whitley. I saved the Batch 6B text as pasted.
+- The decisions log spelled one Council name differently from the founder's earlier file. I saved the Batch 6B text as pasted.
 
 ### State snapshot — 2026-09-27 19:14 UTC
 Status: ✅ Complete
@@ -213,8 +213,7 @@ What I found:
   those answers. I did not commit that file.
 - Answers as written, not cleaned up:
   - Decision 1: `fOUNDERS CALL - DELEWARE`
-  - Decision 2: Brian Walker, Mark Swords, Phiip Whitley, John Davis,
-    Trina Gordon, April Davis (six names; the question asked for three)
+  - Decision 2: six candidates nominated (names withheld; the question asked for three)
   - Decision 3: publish a rough draft by 2026-10-15, aligned with legal
     review
   - Decision 4: `Founders Decision : Definitley C`
