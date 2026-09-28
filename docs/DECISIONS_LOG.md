@@ -5,6 +5,41 @@ Newest at top.
 
 ---
 
+## 2026-09-28 — T-007 USPTO Search: No Class 35 or 43 Records
+
+**Decision:** T-007 is done. On 2026-09-28 the founder ran three exact
+searches on https://tmsearch.uspto.gov/. Each returned "No results
+found."
+
+**Queries (field tag and search builder):**
+
+- `CM:TrailerVegas AND IC:(035 043)`
+- `CM:"Trailer Vegas" AND IC:(035 043)`
+- `CM:"Vegas Trailer" AND IC:(035 043)`
+
+Screenshots: `docs/t007-uspto/`.
+
+**What this covers:** federal applications and registrations whose
+combined mark is that exact string and whose international class is
+35 (business / directory / advertising) or 43 (lodging / RV parks).
+
+**What this does not cover:**
+
+- Other classes. Thor Tech's live **VEGAS** registration (serial
+  86051506, registration 4527163, Class 12, motor homes, renewed,
+  status date 2024-10-11) is outside this search.
+- Common-law use. Vegas Trailer Supply Inc (3076 Fremont St, Las
+  Vegas) and Vegas Trailer Rental LLC (4610 Vandenberg Drive, North
+  Las Vegas) are still the yellow flags for the lawyer on T-006.
+- This is not a clearance opinion.
+
+**Raised by:** Founder (screenshots)
+
+**Status:** Confirmed. T-007 closed. Hand the Class 12 mark and the
+two businesses to counsel with T-006.
+
+---
+
 ## 2026-09-27 — Deploy 500 Fixed, Runtime Read Flagged
 
 **Decision:** The first Batch 10T deploy returned 500 because the

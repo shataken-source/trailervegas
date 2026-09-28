@@ -21,17 +21,6 @@
 
 ---
 
-### T-007 — USPTO Trademark Search for "TrailerVegas"
-- **Assigned to:** Founder
-- **Priority:** 🟠 High
-- **Status:** ⏳ Open
-- **Deadline:** 2026-10-10
-- **Description:** Search USPTO: TrailerVegas, Trailer Vegas, Vegas
-  Trailer. Classes 35 and 43.
-- **Output:** Founder notes in `docs/DECISIONS_LOG.md`
-
----
-
 ### T-011 — Select Tagline and Review Lead-Fee Copy
 - **Assigned to:** Founder
 - **Priority:** 🟡 Medium
@@ -127,6 +116,8 @@
 - **T-008** — Reconcile Covenant with OA — ✅ Claude
 - **T-009** — Covenant §6 Lead-Fee Copy — ✅ ChatGPT
 - **T-010** — Founder Decisions — ✅ Founder
+- **T-007** — USPTO search, Classes 35 and 43 — ✅ Founder
+  (2026-09-28, no results; screenshots in `docs/t007-uspto/`)
 - **T-013** — Supabase Schema + Data Layer — ✅ Claude
 - **T-020** — Remove `displayed_at` from client form payloads — ✅
   Cursor (Batch 10U)
@@ -137,6 +128,8 @@
 
 *(Newest at top.)*
 
+- 2026-09-28 — T-007 closed. Three USPTO searches, Classes 35 and 43,
+  returned no results. Screenshots in `docs/t007-uspto/`.
 - 2026-09-28 — Batch 10U. API routes and stack docs match schema v1.1.
   Help and provide forms no longer send `displayed_at`. T-020 done.
   T-019 still open.
