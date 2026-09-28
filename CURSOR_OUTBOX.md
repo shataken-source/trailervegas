@@ -9,17 +9,33 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10T
-**Run at:** 2026-09-28 02:30 UTC
+**Batch:** 10U
+**Run at:** 2026-09-28 02:45 UTC
 **Status:** ✅ Complete
 
-`displayed_at` is gone from the consent insert and from the live `consent_log` table. A new waitlist signup writes `consent_log`. The six content files are on main. Raw URLs returned 200.
-
-Commits: `7f8f285` (the batch) and `a32e123` (waitlist function could not read the covenant file until the trace include). Production deploy `dpl_24Mk61HTgJtRE37sXPKi9k5AbRum` is READY.
+API routes and the stack data model match schema v1.1. Help and provide forms no longer send `displayed_at`. Commit `f0ccf83`. Raw `docs/API_ROUTES.md` and `docs/STACK.md` returned 200.
 
 ---
 
 ## Report Log
+
+### Batch 10U — 2026-09-28 02:45 UTC
+Status: ✅ Complete
+
+Commands:
+
+- 10U.1 ✅ `docs/API_ROUTES.md`. Waitlist writes `consent_log` with `submission_type = 'waitlist'`. Help and provide no longer list `displayed_at`. Consent logging section: help, provide, and waitlist. Proof chain is `consent_version` + `submitted_at` + `ip` + `user_agent`, plus `covenant_url`. The column name in code is `consent_version`, not `covenant_version`.
+- 10U.2 ✅ `displayed_at` removed from the `consent_log` list in `docs/STACK.md`. There was no migration note to mark.
+- 10U.3 ✅ `components/forms.tsx` help and provide bodies no longer include `displayed_at`. The field was not in `lib/store.ts`.
+- 10U.4 ✅ Decisions log prepended. Older entries below Round 1 Closed were kept. T-020's bullet notes it was closed in this batch.
+- 10U.5 ✅ `TASKS.md` replaced with the pasted list. T-019 is open (runtime covenant read). T-020 is completed, because 10U.3 did that work in this commit.
+- 10U.6 ✅ Commit + push `f0ccf83`.
+- 10U.7 ✅ Raw URL 200: `docs/API_ROUTES.md`, `docs/STACK.md`. Neither file lists `displayed_at` as a column.
+- 10U.8 ✅ This status.
+
+T-019 was logged, not built. The routes still read `docs/TRUST_COVENANT.md` at runtime. The trace include from `a32e123` is what keeps the current deploy from 500ing.
+
+Commit: `f0ccf83`
 
 ### Batch 10T — 2026-09-28 02:30 UTC
 Status: ✅ Complete

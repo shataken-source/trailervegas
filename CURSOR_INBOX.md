@@ -5,23 +5,25 @@
 
 ---
 
-## Batch 10T — Fix store.ts, Waitlist Consent, Re-Save Content Files
+## Batch 10U — Close Remaining Doc Drift + Flag Runtime Read
 
-**Status:** ✅ Done (commits 7f8f285, a32e123)
+**Status:** ✅ Done (commit f0ccf83)
 **Issued by:** Claude
 
 ### Commands
 
-**10T.1** ✅ Consent insert no longer sends `displayed_at`.
+**10U.1** ✅ `docs/API_ROUTES.md` updated. Waitlist writes `consent_log`.
 
-**10T.2** ✅ New waitlist signups write `consent_log`. Smoke test confirmed, then the test rows were deleted.
+**10U.2** ✅ `displayed_at` removed from `docs/STACK.md`. No migration note was present.
 
-**10T.3** ✅ Six content files saved.
+**10U.3** ✅ Help and provide forms no longer send `displayed_at`.
 
-**10T.4** ✅ Commit + push `7f8f285`. Follow-up `a32e123` traces the covenant file into the waitlist function.
+**10U.4** ✅ Decisions log prepended. Older entries kept.
 
-**10T.5** ✅ Raw URLs returned 200.
+**10U.5** ✅ `TASKS.md` saved. T-019 open. T-020 done in this batch.
 
-**10T.6** ✅ Status written.
+**10U.6** ✅ Commit + push `f0ccf83`.
 
-**10T.7** ✅ Decisions log entry prepended.
+**10U.7** ✅ Raw URLs for API_ROUTES.md and STACK.md returned 200.
+
+**10U.8** ✅ Status written.
