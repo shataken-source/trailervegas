@@ -12,12 +12,21 @@
 - **Priority:** 🟢 Low
 - **Status:** ⏳ Open
 - **Description:** Phase 0 hardcodes copy in `lib/copy.ts` and the page
-  components. `content/` is only `.gitkeep`. The six source files
-  (HOMEPAGE_COPY, HELP_FORM_COPY, PROVIDE_FORM_COPY,
-  ABOUT_CONTACT_COPY, PRIVACY_DRAFT, TERMS_DRAFT) were never in this
-  repo and were never pasted in Batches 10i, 10k, or 10M. Do not
-  invent them. When those files are re-pasted, point the app at them.
-- **Output:** `content/*.md` present, and the app reads them
+  components. The six source files are in `content/` as of Batch 10T.
+  Point the app at those files. Do not rewrite the copy while doing it.
+- **Output:** The app reads `content/*.md`
+
+---
+
+### T-019 — Verify waitlist consent_log row
+- **Assigned to:** Founder
+- **Priority:** 🟡 Medium
+- **Status:** ⏳ Open (code done in Batch 10T)
+- **Description:** Waitlist now writes `consent_log` with
+  `submission_type = 'waitlist'` after a new signup. Confirm the next
+  real waitlist submission creates that row. A duplicate email does
+  not write a second consent row.
+- **Output:** Founder note in `docs/DECISIONS_LOG.md`
 
 ---
 
@@ -139,6 +148,9 @@
 
 *(Newest at top.)*
 
+- 2026-09-28 — Batch 10T. Consent insert no longer sends
+  `displayed_at`. Waitlist writes `consent_log`. Six content files
+  saved. T-019 is the live-row check.
 - 2026-09-28 — Batch 10S. Schema file bumped to v1.1 (`displayed_at`
   removed from the file only). `NEXT_PUBLIC_*` marked reserved.
   Content files not restored — source text was never received.

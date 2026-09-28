@@ -56,11 +56,6 @@ export async function POST(request: Request) {
     return jsonError("Validation failed", 400);
   }
 
-  const displayedAt = text(body.displayed_at);
-  const displayed = Number.isNaN(Date.parse(displayedAt))
-    ? new Date().toISOString()
-    : new Date(displayedAt).toISOString();
-
   const saved = await insertRow("help_requests", {
     name,
     email,
@@ -81,7 +76,6 @@ export async function POST(request: Request) {
   const logged = await logConsent({
     submissionType: "help",
     submissionId: saved.id,
-    displayedAt: displayed,
     ip,
     userAgent: userAgent(request),
   });

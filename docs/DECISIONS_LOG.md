@@ -5,6 +5,41 @@ Newest at top.
 
 ---
 
+## 2026-09-27 — Documentation Drift Found and Fixed (Batch 10S/10T)
+
+**Decision:** Cursor's Batch 10S diagnostics found three drifts
+between docs and tree. Fixed in 10S and 10T.
+
+**Drifts found:**
+
+1. `content/` was empty. Six content copy files were cited but never
+   saved to the repo. Fixed in 10T.
+2. `automation/supabase_schema.sql` said v1.0 with `displayed_at`.
+   The decision (Batch 10h) said v1.1 without it. Fixed in 10S.
+3. `lib/store.ts` still sent `displayed_at` — a fresh DB would
+   reject the insert. Fixed in 10T.
+4. The waitlist route did not write `consent_log`. Decision said it
+   should. Fixed in 10T.
+5. `README.md` and `.env.example` referenced `NEXT_PUBLIC_*` vars
+   the app doesn't read. Marked reserved in 10S.
+
+**New tasks logged:**
+
+- T-018 — Move hardcoded copy from `lib/copy.ts` to reads from
+  `content/*.md` (Phase 1 refactor)
+- T-019 — Waitlist consent logging (fixed in 10T; logged for
+  verification)
+
+**Raised by:** Cursor (Batch 10S diagnostics)
+
+**Status:** Fixed. Verified raw URLs.
+
+**Lesson:** "Saved in a batch" ≠ "on main." The protocol rule
+requiring raw URL verification (T-016) exists because of this exact
+class of failure.
+
+---
+
 ## 2026-09-27 — Round 1 Closed
 
 **Decision:** Round 1 is closed. T-005 (Build Phase 0 Homepage and

@@ -16,7 +16,6 @@ export async function insertRow(
 export async function logConsent(input: {
   submissionType: "help" | "provide" | "waitlist";
   submissionId: string;
-  displayedAt: string;
   ip: string;
   userAgent: string;
 }): Promise<boolean> {
@@ -27,7 +26,6 @@ export async function logConsent(input: {
     submission_id: input.submissionId,
     consent_version: consentVersion(),
     covenant_url: COVENANT_URL,
-    displayed_at: input.displayedAt,
     ip: input.ip,
     user_agent: input.userAgent,
   });
