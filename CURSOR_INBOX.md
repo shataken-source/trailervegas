@@ -5,27 +5,25 @@
 
 ---
 
-## Batch 10R — Close Round 1
+## Batch 10S — Verify and Fix Three Doc Drifts
 
-**Status:** ✅ Done (commit 2d7d773)
+**Status:** ✅ Done (commit 3f97b10). Content files not restored — source text was never received.
 **Issued by:** Claude
 
 ### Commands
 
-**10R.1** ✅ `ROUNDS.md` saved. Round 1 closed.
+**A.1–A.6** ✅ Diagnostics run and reported in `CURSOR_OUTBOX.md`.
 
-**10R.2** ✅ `TASKS.md` saved. T-005 done.
+**B.1** ⏸️ Six content files not re-saved. Not in git history. Not in any pasted batch.
 
-**10R.3** ✅ `docs/DECISIONS_LOG.md` saved.
+**B.2** ✅ Schema file is v1.1. `displayed_at` removed from the file. Live database unchanged.
 
-**10R.4** ✅ `README.md` saved.
+**B.3** ✅ `NEXT_PUBLIC_*` marked reserved in `README.md` and `.env.example`.
 
-**10R.5** ✅ `.env.example` saved.
+**B.4** ✅ Hardcoded copy logged as T-018.
 
-**10R.6** ✅ `CHANGELOG.md` saved.
+**C.1** ✅ Commit + push `3f97b10`.
 
-**10R.7** ✅ Commit + push `2d7d773`.
+**C.2** ✅ Raw URLs for the updated files returned 200.
 
-**10R.8** ✅ Raw URLs returned 200 for ROUNDS.md, TASKS.md, README.md.
-
-**10R.9** ✅ Status written.
+**C.3** ✅ Status written.

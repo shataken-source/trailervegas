@@ -9,15 +9,46 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10R
-**Run at:** 2026-09-28 02:05 UTC
-**Status:** ✅ Complete
+**Batch:** 10S
+**Run at:** 2026-09-28 02:20 UTC
+**Status:** ✅ Complete, with one item not fixed
 
-Round 1 is closed. Six files saved, committed, and pushed as `2d7d773`. Raw URLs for ROUNDS.md, TASKS.md, and README.md each returned 200.
+Diagnostics were run before any edit. Commit `3f97b10`. Raw URLs for the five updated files returned 200. The schema file on GitHub is Version 1.1 and its `consent_log` table has no `displayed_at` column.
 
 ---
 
 ## Report Log
+
+### Batch 10S — 2026-09-28 02:20 UTC
+Status: ✅ Complete, with one item not fixed
+
+#### Part A — diagnostics
+
+- A.1 `content/` exists and is not populated. Only `.gitkeep` (0 bytes).
+- A.2 Schema header was `Version: 1.0`, dated 2026-09-27, author Claude.
+- A.3 `displayed_at` was present once, line 103, as a `consent_log` column.
+- A.4 No hits for waitlist/consent_log language in `automation/supabase_schema.sql` or `docs/API_ROUTES.md`. `docs/API_ROUTES.md` says waitlist consent is "Not applicable." The schema check allows `submission_type` of `waitlist`, but no sentence ties the waitlist insert to `consent_log`.
+- A.5 No hits in `app/` or `components/` for HOMEPAGE_COPY, HELP_FORM_COPY, PROVIDE_FORM_COPY, ABOUT_CONTACT_COPY, PRIVACY_DRAFT, or TERMS_DRAFT. Copy is hardcoded in `lib/copy.ts` and the pages.
+- A.6 The app reads `SUPABASE_USERS_URL` and `SUPABASE_USERS_SERVICE_ROLE_KEY` in `lib/supabase.ts`. It does not read `NEXT_PUBLIC_SITE_URL`, `NEXT_PUBLIC_COVENANT_VERSION`, or `NEXT_PUBLIC_PLAUSIBLE_DOMAIN`. It also does not read `SUPABASE_USERS_ANON_KEY`. Site URL and Plausible domain are hardcoded. Consent version is parsed from `docs/TRUST_COVENANT.md`.
+
+Extra check, from the code: `app/api/waitlist/route.ts` inserts into `waitlist` only. It does not call `logConsent`. Help and provide do. A waitlist submission does not write `consent_log`. I did not query the live database.
+
+#### Part B — fixes
+
+- B.1 Not done. Batches 10i, 10k, and 10M are not in this repo's git history and were never pasted here. There is no source text to re-save. I did not invent the six files.
+- B.2 Done. `automation/supabase_schema.sql` is Version 1.1. `displayed_at` is removed from the `consent_log` create statement. The live Supabase project was not changed. `lib/store.ts` still inserts `displayed_at`. `docs/API_ROUTES.md` and `docs/STACK.md` still list it. A fresh database built from this file would reject the current app insert until those are updated.
+- B.3 Done. `README.md` and `.env.example` mark `NEXT_PUBLIC_*` as reserved. The anon key is marked the same way, because the app does not read it either.
+- B.4 Done. Logged as T-018 in `TASKS.md`. Phase 0 still works with hardcoded copy.
+
+`CHANGELOG.md` no longer claims the six content files exist.
+
+#### Part C
+
+- C.1 Commit + push — `3f97b10`. Message: `[Batch 10S] Verify and fix three doc drifts`. `git add -A` staged only the five doc files. No secrets.
+- C.2 Raw URL 200: `automation/supabase_schema.sql` (Version 1.1, no `displayed_at` column), `README.md`, `.env.example`, `TASKS.md`, `CHANGELOG.md`.
+- C.3 This status.
+
+Commit: `3f97b10`
 
 ### Batch 10R — 2026-09-28 02:05 UTC
 Status: ✅ Complete
