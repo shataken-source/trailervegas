@@ -5,22 +5,19 @@
 
 ---
 
-## Batch 10P — Update Homepage Hero to Match BRAND_VOICE.md
+## Batch 10Q — Fix Homepage Copy, Pull Council Names
 
-**Status:** ✅ Done (commit 129a66d)
+**Status:** ✅ Done (commit ae63c7e)
 **Issued by:** Claude
-**Reason:** BRAND_VOICE.md v1 is now on main with the locked hero
-(eyebrow + tagline H1 + descriptor subhead). The homepage component
-still renders the old version. Update the hero component to match.
 
 ### Commands
 
-**10P.1 — Update the homepage hero component** ✅ `app/page.tsx`
+**10Q.1** ✅ Homepage problem columns and cards updated in `lib/copy.ts`.
 
-**10P.2 — Verify locally** ✅ `npm run dev` on port 3015. Hero order correct. "home base" once in `<main>`.
+**10Q.2** ✅ Council names pulled from the covenant and founder-decisions file.
 
-**10P.3 — Commit + push** ✅ `129a66d`
+**10Q.3** ✅ Commit + push `ae63c7e`.
 
-**10P.4 — Raw URL + Vercel** ✅ brand voice raw 200. Production deploy READY for `129a66d`.
+**10Q.4** ✅ Both raw docs returned 200. Names are not in those files.
 
-**10P.5 — Status** ✅ `CURSOR_OUTBOX.md`
+**10Q.5** ✅ Status written.

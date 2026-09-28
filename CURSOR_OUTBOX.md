@@ -9,15 +9,32 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10P
-**Run at:** 2026-09-28 00:50 UTC
+**Batch:** 10Q
+**Run at:** 2026-09-28 01:50 UTC
 **Status:** ✅ Complete
 
-Homepage hero matches `docs/BRAND_VOICE.md`. Live page has "home base" once. Vercel production deploy for `129a66d` is READY.
+Homepage problem columns and cards use the middle-length copy. Council names are off the current public files. Both raw docs returned 200. Commit `ae63c7e`.
 
 ---
 
 ## Report Log
+
+### Batch 10Q — 2026-09-28 01:50 UTC
+Status: ✅ Complete
+
+Commands:
+
+- 10Q.1 ✅ `lib/copy.ts` problem columns and cards. `app/page.tsx` already renders those constants.
+- 10Q.2 ✅ Name list removed from `docs/TRUST_COVENANT.md` §4 and `docs/FOUNDER_DECISIONS_NEEDED.md` Decision 2. Replacement text is the batch wording.
+- 10Q.3 ✅ Commit + push — `ae63c7e`. `git add -A` did not include the copied env dump.
+- 10Q.4 ✅ Raw `docs/TRUST_COVENANT.md` 200. Raw `docs/FOUNDER_DECISIONS_NEEDED.md` 200. Neither file contains the candidate names.
+- 10Q.5 ✅ This status.
+
+Also removed the same names from `docs/DECISIONS_LOG.md`, the covenant v1.2 changelog cell, and older lines in this outbox. Those files were still public.
+
+The names remain in older git commits. I did not rewrite history.
+
+Commit: `ae63c7e`
 
 ### Batch 10P — 2026-09-28 00:50 UTC
 Status: ✅ Complete
