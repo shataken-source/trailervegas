@@ -3,7 +3,7 @@ import { WaitlistForm } from "@/components/forms";
 import {
   BUILDING,
   DESCRIPTOR,
-  HEADLINE,
+  EYEBROW,
   PROBLEMS,
   SUBHEAD,
   TAGLINE,
@@ -19,12 +19,12 @@ export default function HomePage() {
 
   return (
     <div>
-      <p className="text-sm font-semibold uppercase tracking-wide text-pink">{TAGLINE}</p>
-      <p className="mt-2 text-mute">{DESCRIPTOR}</p>
-      <h1 className="mt-6 max-w-3xl font-display text-4xl leading-tight text-navy md:text-6xl">
-        {HEADLINE}
+      <p className="text-sm font-semibold uppercase tracking-wide text-pink">{EYEBROW}</p>
+      <h1 className="mt-3 max-w-3xl font-display text-4xl leading-tight text-navy md:text-6xl">
+        {TAGLINE}
       </h1>
-      <p className="mt-4 max-w-2xl text-lg">{SUBHEAD}</p>
+      <p className="mt-4 max-w-2xl text-lg">{DESCRIPTOR}</p>
+      <p className="mt-3 max-w-2xl">{SUBHEAD}</p>
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <Link href="/help" className="rounded bg-pink px-5 py-3 font-semibold text-white">
           Get Help Now

@@ -1,12 +1,10 @@
 export const SITE = "https://trailervegas.com";
 export const REPO = "https://github.com/shataken-source/trailervegas";
 
+export const EYEBROW = "Built by RVers, not corporations.";
 export const TAGLINE = "Good neighbors. Different ZIP codes.";
 export const DESCRIPTOR =
   "A nationwide home base for RVers, starting along I-15.";
-
-export const HEADLINE =
-  "The RV community's home base. Built by RVers, not corporations.";
 export const SUBHEAD =
   "Find the place. Find the wrench. Find the honest answer. Leave the next person a better map than you had.";
 
