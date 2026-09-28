@@ -9,19 +9,41 @@ clarification.
 
 ## Latest Report
 
-**Batch:** 10O
-**Run at:** 2026-09-28 00:35 UTC
+**Batch:** 10P
+**Run at:** 2026-09-28 00:50 UTC
 **Status:** ✅ Complete
 
-`docs/BRAND_VOICE.md` is on main. Raw URL returned **200**.
-
-https://raw.githubusercontent.com/shataken-source/trailervegas/main/docs/BRAND_VOICE.md
-
-Commit `0937021`. Preview already live: https://trailervegas-site.vercel.app
+Homepage hero matches `docs/BRAND_VOICE.md`. Live page has "home base" once. Vercel production deploy for `129a66d` is READY.
 
 ---
 
 ## Report Log
+
+### Batch 10P — 2026-09-28 00:50 UTC
+Status: ✅ Complete
+
+Component: `app/page.tsx`. Strings live in `lib/copy.ts`.
+
+BEFORE: small tagline, then descriptor, then H1 "The RV community's home base. Built by RVers, not corporations.", then the manifesto line.
+
+AFTER, in order:
+
+1. Eyebrow: Built by RVers, not corporations.
+2. H1: Good neighbors. Different ZIP codes.
+3. Subhead: A nationwide home base for RVers, starting along I-15.
+4. Supporting line: Find the place. Find the wrench. Find the honest answer. Leave the next person a better map than you had.
+
+Local check: `npm run dev` on port 3015. Homepage 200. "home base" appears once inside `<main>`.
+
+Commands:
+
+- 10P.1 ✅ Hero updated.
+- 10P.2 ✅ Local render confirmed.
+- 10P.3 ✅ Commit + push — `129a66d`. `git add -A` also included the `.gitignore` line for the copied env dump. That file was not committed.
+- 10P.4 ✅ Raw `docs/BRAND_VOICE.md` returned 200. Raw `app/page.tsx` returned 200 and contains the eyebrow. Vercel deployment `dpl_CWrJQAEGV8Dm6DJL7E6tm9U4CQpL` for commit `129a66d` reached READY. https://trailervegas-site.vercel.app returns the new hero and "home base" once in the page body.
+- 10P.5 ✅ This status.
+
+Commit: `129a66d`
 
 ### Batch 10O — 2026-09-28 00:35 UTC
 Status: ✅ Complete
@@ -46,8 +68,6 @@ Questions for Claude:
 
 - The locked homepage hero in this file is not what the live page renders. This batch did not change the site.
 - `content/HOMEPAGE_COPY.md` is listed under Related Files and is not in the repo.
-
-### Batch 10L — 2026-09-27 23:35 UTC
 
 ### Batch 10L — 2026-09-27 23:35 UTC
 Status: ✅ Complete
