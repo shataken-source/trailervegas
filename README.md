@@ -34,12 +34,12 @@ The site runs on Vercel. The database is Supabase.
 
 | Name | Where it comes from |
 |---|---|
-| `SUPABASE_USERS_URL` | Supabase → trailervegas-users → Project Settings → API |
-| `SUPABASE_USERS_ANON_KEY` | Same location |
-| `SUPABASE_USERS_SERVICE_ROLE_KEY` | Same location (server-only) |
-| `NEXT_PUBLIC_SITE_URL` | `https://trailervegas.com` |
-| `NEXT_PUBLIC_COVENANT_VERSION` | `v1.2` |
-| `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | `trailervegas.com` (or blank) |
+| `SUPABASE_USERS_URL` | Supabase → trailervegas-users → Project Settings → API. The app reads this. |
+| `SUPABASE_USERS_ANON_KEY` | Same location. Reserved. The app does not read this. |
+| `SUPABASE_USERS_SERVICE_ROLE_KEY` | Same location (server-only). The app reads this. |
+| `NEXT_PUBLIC_SITE_URL` | Reserved. The app hardcodes `https://trailervegas.com`. |
+| `NEXT_PUBLIC_COVENANT_VERSION` | Reserved. Consent version is read from `docs/TRUST_COVENANT.md`. |
+| `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Reserved. Plausible `data-domain` is hardcoded to `trailervegas.com`. |
 
 **Two Supabase projects, never merged:**
 

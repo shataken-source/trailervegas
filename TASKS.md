@@ -7,6 +7,20 @@
 
 ## Active Tasks
 
+### T-018 — Wire the app to content/ copy files
+- **Assigned to:** Later (Phase 1)
+- **Priority:** 🟢 Low
+- **Status:** ⏳ Open
+- **Description:** Phase 0 hardcodes copy in `lib/copy.ts` and the page
+  components. `content/` is only `.gitkeep`. The six source files
+  (HOMEPAGE_COPY, HELP_FORM_COPY, PROVIDE_FORM_COPY,
+  ABOUT_CONTACT_COPY, PRIVACY_DRAFT, TERMS_DRAFT) were never in this
+  repo and were never pasted in Batches 10i, 10k, or 10M. Do not
+  invent them. When those files are re-pasted, point the app at them.
+- **Output:** `content/*.md` present, and the app reads them
+
+---
+
 ### T-006 — Legal Review of Trust Covenant & OA Clause
 - **Assigned to:** Founder (human lawyer)
 - **Priority:** 🔴 Critical
@@ -125,6 +139,10 @@
 
 *(Newest at top.)*
 
+- 2026-09-28 — Batch 10S. Schema file bumped to v1.1 (`displayed_at`
+  removed from the file only). `NEXT_PUBLIC_*` marked reserved.
+  Content files not restored — source text was never received.
+  Logged T-018.
 - 2026-09-27 — **Round 1 closed.** Live doorbell at
   https://trailervegas-site.vercel.app. Phone test passed. Forms
   write to all four Supabase tables. Copy review passed.

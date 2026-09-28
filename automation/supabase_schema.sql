@@ -1,7 +1,9 @@
 -- TrailerVegas Supabase Schema
--- Version: 1.0
+-- Version: 1.1
 -- Date: 2026-09-27
 -- Author: Claude
+-- v1.1 (2026-09-28): removed consent_log.displayed_at from this file.
+-- This does not alter the live trailervegas-users database.
 --
 -- TWO PROJECTS. Do not combine. See docs/STACK.md.
 --
@@ -100,7 +102,6 @@ create table if not exists public.consent_log (
   submission_id     uuid not null,
   consent_version   text not null,
   covenant_url      text not null,
-  displayed_at      timestamptz not null,
   submitted_at      timestamptz not null default now(),
   ip                text,
   user_agent        text

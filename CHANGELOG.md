@@ -16,8 +16,10 @@ All notable changes to this project. Format based on Keep a Changelog.
 - `docs/BRAND_VOICE.md` — tagline, descriptor slot, hero order,
   voice rules
 - `docs/API_ROUTES.md` — Next.js API route specs
-- `automation/supabase_schema.sql` — full schema v1.1
-- `content/` — six homepage + form copy files
+- `automation/supabase_schema.sql` — schema file is v1.1 as of Batch 10S
+  (`displayed_at` removed from the file; live database unchanged)
+- `content/` — only `.gitkeep`. The six copy files were never saved
+  (T-018)
 - `docs/EXHIBIT_A_STUB.md` — one-page conversion plan
 - `docs/STACK.md` — technical stack
 - `docs/AUTOMATION_PLAN.md` — AI roundtable automation plan
