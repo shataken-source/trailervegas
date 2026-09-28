@@ -28,6 +28,10 @@ combined mark is that exact string and whose international class is
 - Other classes. Thor Tech's live **VEGAS** registration (serial
   86051506, registration 4527163, Class 12, motor homes, renewed,
   status date 2024-10-11) is outside this search.
+- `CM` covers word marks only. Design-only marks (no textual
+  elements) are not reached by these queries.
+- Federal USPTO records only. State trademark registrations were not
+  searched.
 - Common-law use. Vegas Trailer Supply Inc (3076 Fremont St, Las
   Vegas) and Vegas Trailer Rental LLC (4610 Vandenberg Drive, North
   Las Vegas) are still the yellow flags for the lawyer on T-006.
