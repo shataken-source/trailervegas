@@ -5,38 +5,70 @@ Newest at top.
 
 ---
 
-## 2026-09-27 — Documentation Drift Found and Fixed (Batch 10S/10T)
+## 2026-09-27 — Deploy 500 Fixed, Runtime Read Flagged
+
+**Decision:** The first Batch 10T deploy returned 500 because the
+waitlist function tried to read `docs/TRUST_COVENANT.md` at runtime.
+Fixed in a32e123 (file included in serverless function traces). Design
+smell logged as T-019.
+
+**What happened:**
+- 10T pushed the waitlist consent write
+- Deploy went live, but waitlist route 500'd
+- Root cause: `readFileSync('docs/TRUST_COVENANT.md')` — file not
+  bundled into the serverless function by default
+- Fix: explicit include in the function config for waitlist, help,
+  provide routes
+- Production deploy dpl_24Mk61HTgJtRE37sXPKi9k5AbRum is READY
+
+**Better long-term fix (T-019):** Inline the covenant version as a
+build-time constant. Update it when the covenant versions up. No
+runtime file read. A serverless function should not depend on a
+markdown file existing at a specific path.
+
+**Raised by:** Cursor (during 10T verification)
+
+**Status:** Deploy fixed. Refactor logged as T-019.
+
+---
+
+## 2026-09-27 — Documentation Drift Found and Fixed (Batches 10S/10T)
 
 **Decision:** Cursor's Batch 10S diagnostics found three drifts
-between docs and tree. Fixed in 10S and 10T.
+between docs and tree. Fixed across 10S and 10T.
 
-**Drifts found:**
+**Drifts found and fixed:**
 
-1. `content/` was empty. Six content copy files were cited but never
-   saved to the repo. Fixed in 10T.
+1. `content/` was empty. Six content copy files cited but never saved.
+   Fixed in 10T.
 2. `automation/supabase_schema.sql` said v1.0 with `displayed_at`.
-   The decision (Batch 10h) said v1.1 without it. Fixed in 10S.
-3. `lib/store.ts` still sent `displayed_at` — a fresh DB would
-   reject the insert. Fixed in 10T.
+   Fixed in 10S (bumped to v1.1, dropped column).
+3. `lib/store.ts` still sent `displayed_at` — a fresh DB would reject
+   the insert. Fixed in 10T.
 4. The waitlist route did not write `consent_log`. Decision said it
    should. Fixed in 10T.
-5. `README.md` and `.env.example` referenced `NEXT_PUBLIC_*` vars
-   the app doesn't read. Marked reserved in 10S.
+5. `README.md` and `.env.example` referenced `NEXT_PUBLIC_*` vars the
+   app doesn't read. Marked reserved in 10S.
+6. Live `consent_log.displayed_at` column was required with no
+   default. Dropped on live project before push. Would have made
+   every consent insert fail otherwise.
 
 **New tasks logged:**
 
 - T-018 — Move hardcoded copy from `lib/copy.ts` to reads from
   `content/*.md` (Phase 1 refactor)
-- T-019 — Waitlist consent logging (fixed in 10T; logged for
-  verification)
-
-**Raised by:** Cursor (Batch 10S diagnostics)
-
-**Status:** Fixed. Verified raw URLs.
+- T-019 — Inline covenant version as build-time constant, drop
+  runtime markdown read
+- T-020 — Remove `displayed_at` from client form JSON payloads
+  (dead weight; server ignores). Closed in Batch 10U.
 
 **Lesson:** "Saved in a batch" ≠ "on main." The protocol rule
 requiring raw URL verification (T-016) exists because of this exact
 class of failure.
+
+**Raised by:** Cursor (Batch 10S diagnostics, Batch 10T execution)
+
+**Status:** Fixed. Verified raw URLs.
 
 ---
 

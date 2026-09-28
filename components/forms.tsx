@@ -85,7 +85,6 @@ export function HelpForm() {
   const router = useRouter();
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
-  const displayedAt = new Date().toISOString();
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -106,7 +105,6 @@ export function HelpForm() {
         urgency: data.get("urgency"),
         description: data.get("description"),
         consent: data.get("consent") === "on",
-        displayed_at: displayedAt,
         website: data.get("website"),
       }),
     });
@@ -182,7 +180,6 @@ export function ProvideForm() {
   const router = useRouter();
   const [error, setError] = useState("");
   const [pending, setPending] = useState(false);
-  const displayedAt = new Date().toISOString();
 
   async function onSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -204,7 +201,6 @@ export function ProvideForm() {
         years_in_business: data.get("years_in_business"),
         description: data.get("description"),
         consent: data.get("consent") === "on",
-        displayed_at: displayedAt,
         fax: data.get("fax"),
       }),
     });

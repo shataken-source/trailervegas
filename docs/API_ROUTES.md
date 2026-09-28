@@ -48,15 +48,16 @@ website?: string // honeypot — must be empty
 
 **On success:**
 - Insert into `waitlist`
+- Insert into `consent_log` with `submission_type = 'waitlist'`
 - Return `{ ok: true }`
+
+A duplicate email returns `{ ok: true }` and does not write a second
+consent row.
 
 **Errors:**
 - `400` — invalid email
 - `429` — rate limited
 - `500` — server error
-
-**Consent version:** Not applicable — waitlist is not PII beyond
-email.
 
 ---
 
@@ -89,7 +90,6 @@ website?: string // honeypot
   - `submission_id = <new help_requests.id>`
   - `consent_version = <current covenant version>`
   - `covenant_url = 'https://trailervegas.com/trust'`
-  - `displayed_at = <client timestamp from form>`
   - `submitted_at = now()`
   - `ip`, `user_agent`
 - Send notification to founder (email via Resend or console log for
@@ -133,23 +133,24 @@ or `fax`. Emergent decides.
 
 **On success:**
 - Insert into `provider_applications`
-- Insert into `consent_log` with `submission_type = 'provide'`
+- Insert into `consent_log` with `submission_type = 'provide'`,
+  `consent_version`, `covenant_url`, `submitted_at`, `ip`, `user_agent`
 - Send notification to founder
 - Return `{ ok: true }`
 
 ---
 
-## Consent Version — Source of Truth
+## Consent Logging
 
-The `consent_version` field records which version of the Trust
-Covenant was displayed when the user submitted. The current value is
-embedded in the page at build time by reading
-`docs/TRUST_COVENANT.md`'s version line.
+Help, provide, and waitlist all write `consent_log`. There is no
+`displayed_at` column.
 
-**Phase 0 value:** `v1.2`
+Proof chain: `consent_version` + `submitted_at` + `ip` + `user_agent`,
+plus `covenant_url`.
 
-When the covenant is versioned up, the API route's constant updates
-with the next deploy. No manual sync.
+The version string is read at runtime from `docs/TRUST_COVENANT.md`.
+That path read is fragile on serverless and is logged as T-019.
+**Phase 0 value:** `v1.2`.
 
 ---
 

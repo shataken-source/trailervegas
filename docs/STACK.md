@@ -135,7 +135,6 @@ IP and user-agent are stored for **audit**, not protection.
 - submission_id (uuid)
 - consent_version (text)
 - covenant_url (text)
-- displayed_at (timestamptz)
 - submitted_at (timestamptz)
 - ip (text)
 - user_agent (text)
