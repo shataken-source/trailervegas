@@ -5,105 +5,82 @@ active. What's resolved.
 
 ---
 
-## How Rounds Work
-
-A **round** is one full pass through the AIs. Each AI contributes once per
-round. When all contributions are in, the founder marks the round complete
-and starts a new one.
-
-Rounds can be topic-specific ("Round 2: Trust Covenant red-team") or broad
-("Round 3: Open brainstorm").
-
----
-
 ## Current Round
 
-**Round:** 1
-**Topic:** Open brainstorm + first task assignments
-**Started:** 2026-09-27
-**Status:** In progress
+**Round:** 2 — not yet opened
+**Opening:** when founder is ready
+**Status:** Awaiting kickoff
 
-### Participants
+### Round 2 Candidate Topics
 
-| AI | Assigned | Status | Contribution |
-|---|---|---|---|
-| Claude | Driver setup + seed list (T-001) | ✅ Done — docs, protocol, seed list | Docs, protocol, seed list |
-| Grok | Trust Covenant red-team (T-002) | ⏳ Open | — |
-| Gemini | Corridor research (T-003) | ⏳ Open | — |
-| ChatGPT | Tagline alternatives (T-004) | ⏳ Open | — |
-| Emergent | Build Phase 0 homepage (T-005) | ⏸️ Blocked | — |
-
-### Round 1 Goals
-
-- Get a contrarian take on the Trust Covenant
-- Get alternative taglines
-- Get corridor research
-- Get the first build from Emergent
-
-### Round 1 Outcome
-
-*(Filled in when round completes.)*
+- Repo visibility (public vs split vs private) — residual Council
+  names in git history
+- Protocol fix: raw URL verification mandatory after every push
+- T-007 USPTO search result review
+- T-011 decision B (lead-fee copy) review
+- Directory (T-012) phone verification plan
+- Quarterly update draft (first one)
+- Supabase roundtable project setup (T-015)
 
 ---
 
 ## Round History
 
-### Round 0 — Pre-launch setup (2026-09-27)
+### Round 1 — Kickoff through T-005 deliverable (2026-09-27)
 
-**Goal:** Set up the project infrastructure.
+**Goal:** Set up infrastructure. Get the doorbell live.
 
 **Completed:**
-- Manifesto drafted (Claude)
-- Trust Covenant drafted (Claude)
-- Operating Agreement Clause drafted (Claude)
-- Competitive Research compiled (Claude)
-- Product Scope V1 locked (Claude)
-- Monetization plan drafted (Claude)
-- Emergent Build Spec drafted (Claude)
-- I-15 Seed List drafted (Claude)
-- AI Collaboration Protocol set up (Claude)
-- Handoff Briefs written (Claude)
-- Repo structure designed and pushed (Founder + local agent)
 
-**Outcome:** Project infrastructure ready. Round 1 begins.
+- Claude: MANIFESTO, TRUST_COVENANT v1.0, OPERATING_AGREEMENT_CLAUSE,
+  COMPETITIVE_RESEARCH, PRODUCT_SCOPE_V1, MONETIZATION, AI_COLLABORATION,
+  PROJECT_DRIVER, HANDOFF_BRIEFS, HOW_TO_ROUTE, EMERGENT_BUILD_SPEC,
+  TEMPLATE_PLACE, TEMPLATE_PROVIDER, DECISIONS_LOG, I15_SEED_LIST,
+  HANDOFF, CURSOR_PROTOCOL, CURSOR_INBOX, CURSOR_OUTBOX, BRAND_VOICE,
+  STACK, API_ROUTES, supabase_schema.sql, AUTOMATION_PLAN, EXHIBIT_A_STUB
+- Grok: Trust Covenant red-team — 15 findings, all accepted
+- Gemini: I-15 vs I-10 corridor research — I-15 locked
+- ChatGPT: Tagline alternatives (T-004), lead-fee copy (T-009)
+- Emergent: T-005 build — 10 routes, Next.js + Supabase, content copy,
+  deploy README, live preview URL
+- Founder: Four decisions (Delaware, 6 Council candidates, Exhibit A
+  2026-10-15, Option C), tagline selection, Supabase + Vercel setup,
+  phone test
+
+**Live artifact:** https://trailervegas-site.vercel.app
+
+**Round 1 outcome:** Doorbell is live. Forms write to all four Supabase
+tables (waitlist, help_requests, provider_applications, consent_log).
+Copy review passed against MANIFESTO and TRUST_COVENANT.
+
+**Residual items carried to Round 2:**
+
+- Council names in older git commits (not current tree)
+- Protocol fix needed: raw URL verification mandatory after push
+- T-007 (USPTO search) — founder
+- T-011 decision B (lead-fee copy) — founder
+- T-012 (directory) — blocked on phone verification
+- T-015 (roundtable Supabase project) — pending
+
+---
+
+## How Rounds Work
+
+A **round** is one full pass through the AIs. Each AI contributes once
+per round. When all contributions are in, the founder marks the round
+complete and starts a new one.
 
 ---
 
 ## Rules for Rounds
 
-1. **One contribution per AI per round.** No editing after you submit.
-   Add a new message next round if you want to revise.
-2. **Read everything before contributing.** Don't repeat what's been said.
-3. **Build on others' ideas.** Reference them by name.
-4. **Disagree openly.** Log it. Don't silently rewrite.
-5. **If a topic is resolved, move it to "Resolved" in BRAINSTORM.md.**
-6. **Flag decisions with 🚩 DECISION NEEDED.** The founder makes the call.
-7. **Round ends when all participants have contributed or passed.**
-
----
-
-## How to Start a New Round
-
-1. Update the "Current Round" section.
-2. Assign topics to each AI.
-3. Write a one-line goal for the round.
-4. Route the updated files to each AI.
-5. When all contributions are in, fill in "Round 1 Outcome."
-6. Move the round to "Round History."
-7. Start the next round.
-
----
-
-## What the Founder Does Between Rounds
-
-1. Read all contributions.
-2. Move resolved topics to `docs/DECISIONS_LOG.md` with a decision.
-3. Update `CHANGELOG.md`.
-4. Update `BRAINSTORM.md` "Open Questions" table.
-5. Assign the next round.
-6. Route the files.
-
-About 15 minutes per round. That's the cost of keeping five AIs coherent.
+1. One contribution per AI per round.
+2. Read everything before contributing.
+3. Build on others' ideas. Reference by name.
+4. Disagree openly. Log it.
+5. If a topic is resolved, move it to "Resolved."
+6. Flag decisions with 🚩 DECISION NEEDED.
+7. Round ends when all participants contribute or pass.
 
 ---
 
